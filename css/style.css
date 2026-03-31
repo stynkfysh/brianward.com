@@ -71,14 +71,16 @@ p {
 /* ============================================
    HEADER
    ============================================ */
-.site-header {
+.site-header,
+.header {
     background: #e8e0d8;
     border-bottom: 3px solid #999;
     max-width: 960px;
     margin: 0 auto;
 }
 
-.header-inner {
+.header-inner,
+.header-content {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -86,7 +88,8 @@ p {
     position: relative;
 }
 
-.header-logo {
+.header-logo,
+.logo-container {
     display: flex;
     align-items: center;
     gap: 12px;
@@ -94,7 +97,8 @@ p {
     color: #333;
 }
 
-.header-logo:hover {
+.header-logo:hover,
+.logo-container:hover {
     color: #333;
     text-decoration: none;
 }
@@ -111,9 +115,12 @@ p {
     font-weight: bold;
     font-family: Georgia, serif;
     border: 2px solid #999;
+    flex-shrink: 0;
 }
 
-.header-text h1 {
+.header-text h1,
+.logo-text h1,
+.logo-title {
     font-size: 25px;
     font-weight: bold;
     color: #333;
@@ -121,7 +128,8 @@ p {
     line-height: 1.2;
 }
 
-.header-tagline {
+.header-tagline,
+.logo-tagline {
     font-size: 16px;
     color: #444;
     margin-top: 4px;
@@ -531,7 +539,8 @@ table th {
    RESPONSIVE - Tablet (768px and below)
    ============================================ */
 @media (max-width: 768px) {
-    .header-inner {
+    .header-inner,
+    .header-content {
         flex-wrap: wrap;
         padding: 12px 15px;
     }
@@ -540,11 +549,14 @@ table th {
         display: none;
     }
 
-    .header-text h1 {
+    .header-text h1,
+    .logo-text h1,
+    .logo-title {
         font-size: 20px;
     }
 
-    .header-tagline {
+    .header-tagline,
+    .logo-tagline {
         font-size: 13px;
     }
 
@@ -592,7 +604,8 @@ table th {
         font-size: 14px;
     }
 
-    .header-inner {
+    .header-inner,
+    .header-content {
         padding: 10px;
     }
 
@@ -602,11 +615,14 @@ table th {
         font-size: 22px;
     }
 
-    .header-text h1 {
+    .header-text h1,
+    .logo-text h1,
+    .logo-title {
         font-size: 17px;
     }
 
-    .header-tagline {
+    .header-tagline,
+    .logo-tagline {
         font-size: 12px;
     }
 
