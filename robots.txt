@@ -1,0 +1,18 @@
+# Brian Ward Appraisal robots.txt
+# Allow all crawlers to index the site
+
+User-agent: *
+Allow: /
+Disallow: /admin/
+Crawl-delay: 1
+
+# Specific rules for Googlebot
+User-agent: Googlebot
+Allow: /
+
+# Specific rules for Bingbot
+User-agent: Bingbot
+Allow: /
+
+# Sitemap location
+Sitemap: https://www.brianward.com/sitemap.xml
