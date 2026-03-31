@@ -229,6 +229,12 @@ p {
     display: inline-block;
 }
 
+.sidebar-left .cities-section {
+    margin-top: 14px;
+    padding-top: 10px;
+    border-top: 1px solid #ddd;
+}
+
 .cities-list {
     list-style: disc;
     padding-left: 18px;
