@@ -3,49 +3,42 @@
 const pricingData = {
   services: [
     {
-      name: 'Standard Appraisal (FNMA 1004)',
-      description: 'Full interior and exterior inspection with comparable sales analysis',
-      startingPrice: 420,
-      turnaround: '5-7 business days',
-      recommended: true
-    },
-    {
-      name: 'Consumer Appraisal (FNMA 2055)',
-      description: 'Detailed appraisal suitable for various purposes including estate planning',
-      startingPrice: 390,
-      turnaround: '5-7 business days',
-      recommended: false
-    },
-    {
-      name: 'Exterior/Drive-By (FNMA 2005)',
-      description: 'Exterior inspection and comparable sales analysis',
-      startingPrice: 325,
-      turnaround: '3-5 business days',
-      recommended: false
-    },
-    {
-      name: 'Desktop Appraisal',
+      name: 'Basic Desktop Appraisal',
       description: 'Value estimate using publicly available data, no property inspection',
-      startingPrice: 325,
+      startingPrice: 299,
       turnaround: '2-3 business days',
       recommended: false
     },
     {
-      name: '2-4 Unit Property',
-      description: 'Appraisal for multi-unit residential properties',
-      startingPrice: 600,
+      name: 'Desktop Appraisal',
+      description: 'Detailed appraisal using available data sources, suitable for estate planning and tax purposes',
+      startingPrice: 449,
+      turnaround: '3-5 business days',
+      recommended: false
+    },
+    {
+      name: 'Drive-By Appraisal',
+      description: 'Exterior inspection and comparable sales analysis',
+      startingPrice: 575,
+      turnaround: '3-5 business days',
+      recommended: false
+    },
+    {
+      name: 'Standard Appraisal',
+      description: 'Full interior and exterior inspection with comparable sales analysis',
+      startingPrice: 625,
+      turnaround: '5-7 business days',
+      recommended: true
+    },
+    {
+      name: 'Standard 2-4 Unit Appraisal',
+      description: 'Appraisal for multi-unit residential properties (2-4 units)',
+      startingPrice: 725,
       turnaround: '7-10 business days',
       recommended: false
     }
   ],
-  promotions: [
-    {
-      code: 'BANK50',
-      description: 'Bankruptcy appraisals',
-      discount: 50,
-      type: 'fixed'
-    }
-  ]
+  promotions: []
 };
 
 /**
@@ -105,8 +98,8 @@ function renderPromotions() {
   let html = '';
 
   pricingData.promotions.forEach(promo => {
-    const discountText = promo.type === 'fixed' 
-      ? `$${promo.discount} off` 
+    const discountText = promo.type === 'fixed'
+      ? `$${promo.discount} off`
       : `${promo.discount}% off`;
 
     html += `
