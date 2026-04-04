@@ -1,11 +1,11 @@
 // Brian Ward Appraisal - Main JavaScript
 document.addEventListener('DOMContentLoaded', function() {
-    // Mobile menu toggle
-    var toggle = document.querySelector('.mobile-menu-toggle');
-    var sidebar = document.querySelector('.sidebar-left');
-    if (toggle && sidebar) {
+    // Mobile nav toggle
+    var toggle = document.querySelector('.mobile-nav-toggle');
+    var navInner = document.querySelector('.top-nav-inner');
+    if (toggle && navInner) {
         toggle.addEventListener('click', function() {
-            sidebar.classList.toggle('open');
+            navInner.classList.toggle('open');
             var expanded = toggle.getAttribute('aria-expanded') === 'true';
             toggle.setAttribute('aria-expanded', !expanded);
         });
