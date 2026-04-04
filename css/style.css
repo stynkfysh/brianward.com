@@ -687,6 +687,37 @@ p {
     margin: 4px 0;
 }
 
+.blog-pagination {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    margin: 20px 0 10px;
+    padding-top: 12px;
+    border-top: 1px solid #ddd;
+}
+
+.blog-pagination .page-link,
+.blog-pagination .page-current {
+    display: inline-block;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 13px;
+    text-decoration: none;
+    color: #333;
+}
+
+.blog-pagination .page-current {
+    background: #913900;
+    color: #fff;
+    border-color: #913900;
+}
+
+.blog-pagination .page-link:hover {
+    background: #f0e8e0;
+    border-color: #913900;
+}
+
 /* Tables */
 table {
     border-collapse: collapse;
