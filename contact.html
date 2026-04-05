@@ -106,8 +106,15 @@
 
             <p>If you don't reach us by phone, we're probably giving a client our full attention. Please leave a message and we will return your call as soon as possible. You may also prefer to use the online form below to request your appraisal.</p>
 
+            <div id="form-success" style="display:none; background:#e8f5e9; border:1px solid #4caf50; padding:14px 18px; border-radius:4px; margin-bottom:15px; color:#2e7d32;">
+                <strong>Thank you!</strong> Your inquiry has been sent. We will get back to you shortly.
+            </div>
+            <div id="form-error" style="display:none; background:#fbe9e7; border:1px solid #d32f2f; padding:14px 18px; border-radius:4px; margin-bottom:15px; color:#c62828;">
+                <strong>Something went wrong.</strong> Please try again, or contact us directly by phone or email.
+            </div>
+
             <h3>Getting Started Online Form</h3>
-            <form action="https://formspree.io/f/xdojpkbk" method="POST">
+            <form action="/api/contact" method="POST">
                 <div style="margin-bottom: 15px;">
                     <label for="name">Name <span style="color: #d32f2f;">*</span></label>
                     <input type="text" id="name" name="name" required style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px;">
@@ -148,8 +155,8 @@
                 </div>
 
                 <div style="margin-bottom: 15px;">
-                    <label for="additional-info">Additional Information</label>
-                    <textarea id="additional-info" name="additional-info" rows="5" style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px;"></textarea>
+                    <label for="message">Additional Information</label>
+                    <textarea id="message" name="message" rows="5" style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px;"></textarea>
                 </div>
 
                 <button type="submit" style="background-color: #1976d2; color: white; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer; font-size: 16px;">Submit</button>
@@ -183,5 +190,19 @@
     </footer>
 
     <script src="js/main.js"></script>
+    <script>
+    (function() {
+        var params = new URLSearchParams(window.location.search);
+        var status = params.get('status');
+        if (status === 'success') {
+            document.getElementById('form-success').style.display = 'block';
+            document.querySelector('form').style.display = 'none';
+            document.getElementById('form-success').scrollIntoView({ behavior: 'smooth' });
+        } else if (status === 'error') {
+            document.getElementById('form-error').style.display = 'block';
+            document.getElementById('form-error').scrollIntoView({ behavior: 'smooth' });
+        }
+    })();
+    </script>
 </body>
 </html>
