@@ -2,479 +2,404 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <!-- Main Pages -->
   <url>
-    <loc>https://brianward-com.pages.dev/index.html</loc>
-    <lastmod>2026-03-31</lastmod>
+    <loc>https://www.brianward.com/index.html</loc>
+    <lastmod>2026-04-05</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://brianward-com.pages.dev/appraisal-fees.html</loc>
-    <lastmod>2026-03-31</lastmod>
+    <loc>https://www.brianward.com/appraisal-fees.html</loc>
+    <lastmod>2026-04-05</lastmod>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://brianward-com.pages.dev/service-area.html</loc>
-    <lastmod>2026-03-31</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://brianward-com.pages.dev/contact.html</loc>
-    <lastmod>2026-03-31</lastmod>
+    <loc>https://www.brianward.com/contact.html</loc>
+    <lastmod>2026-04-05</lastmod>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://brianward-com.pages.dev/blog.html</loc>
-    <lastmod>2026-03-31</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://brianward-com.pages.dev/faq.html</loc>
-    <lastmod>2026-03-31</lastmod>
+    <loc>https://www.brianward.com/service-area.html</loc>
+    <lastmod>2026-04-05</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://brianward-com.pages.dev/reviews.html</loc>
-    <lastmod>2026-03-31</lastmod>
+    <loc>https://www.brianward.com/faq.html</loc>
+    <lastmod>2026-04-05</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.brianward.com/reviews.html</loc>
+    <lastmod>2026-04-05</lastmod>
     <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.brianward.com/blog.html</loc>
+    <lastmod>2026-04-05</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.brianward.com/blog-2.html</loc>
+    <lastmod>2026-04-05</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.brianward.com/blog-3.html</loc>
+    <lastmod>2026-04-05</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.brianward.com/blog-4.html</loc>
+    <lastmod>2026-04-05</lastmod>
+    <priority>0.6</priority>
   </url>
 
   <!-- Appraisal Type Pages -->
   <url>
-    <loc>https://brianward-com.pages.dev/bankruptcy-appraisal.html</loc>
-    <lastmod>2026-03-31</lastmod>
+    <loc>https://www.brianward.com/bankruptcy-appraisal.html</loc>
+    <lastmod>2026-04-05</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://brianward-com.pages.dev/divorce-appraisal.html</loc>
-    <lastmod>2026-03-31</lastmod>
+    <loc>https://www.brianward.com/bonds-appraisal.html</loc>
+    <lastmod>2026-04-05</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://brianward-com.pages.dev/date-of-death-appraisal.html</loc>
-    <lastmod>2026-03-31</lastmod>
+    <loc>https://www.brianward.com/date-of-death-appraisal.html</loc>
+    <lastmod>2026-04-05</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://brianward-com.pages.dev/estate-appraisal.html</loc>
-    <lastmod>2026-03-31</lastmod>
+    <loc>https://www.brianward.com/divorce-appraisal.html</loc>
+    <lastmod>2026-04-05</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://brianward-com.pages.dev/tax-appraisal.html</loc>
-    <lastmod>2026-03-31</lastmod>
+    <loc>https://www.brianward.com/estate-appraisal.html</loc>
+    <lastmod>2026-04-05</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://brianward-com.pages.dev/pre-purchase-appraisal.html</loc>
-    <lastmod>2026-03-31</lastmod>
+    <loc>https://www.brianward.com/family-transaction-appraisal.html</loc>
+    <lastmod>2026-04-05</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://brianward-com.pages.dev/pre-sale-appraisal.html</loc>
-    <lastmod>2026-03-31</lastmod>
+    <loc>https://www.brianward.com/insurance-appraisal.html</loc>
+    <lastmod>2026-04-05</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://brianward-com.pages.dev/family-transaction-appraisal.html</loc>
-    <lastmod>2026-03-31</lastmod>
+    <loc>https://www.brianward.com/pmi-removal.html</loc>
+    <lastmod>2026-04-05</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://brianward-com.pages.dev/insurance-appraisal.html</loc>
-    <lastmod>2026-03-31</lastmod>
+    <loc>https://www.brianward.com/pre-purchase-appraisal.html</loc>
+    <lastmod>2026-04-05</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://brianward-com.pages.dev/pmi-removal.html</loc>
-    <lastmod>2026-03-31</lastmod>
+    <loc>https://www.brianward.com/pre-sale-appraisal.html</loc>
+    <lastmod>2026-04-05</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://brianward-com.pages.dev/bonds-appraisal.html</loc>
-    <lastmod>2026-03-31</lastmod>
+    <loc>https://www.brianward.com/tax-appraisal.html</loc>
+    <lastmod>2026-04-05</lastmod>
     <priority>0.8</priority>
   </url>
 
   <!-- Area Pages -->
   <url>
-    <loc>https://brianward-com.pages.dev/areas/san-diego.html</loc>
-    <lastmod>2026-03-31</lastmod>
+    <loc>https://www.brianward.com/areas/aguanga.html</loc>
+    <lastmod>2026-04-05</lastmod>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://brianward-com.pages.dev/areas/chula-vista.html</loc>
-    <lastmod>2026-03-31</lastmod>
+    <loc>https://www.brianward.com/areas/alpine.html</loc>
+    <lastmod>2026-04-05</lastmod>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://brianward-com.pages.dev/areas/oceanside.html</loc>
-    <lastmod>2026-03-31</lastmod>
+    <loc>https://www.brianward.com/areas/anza.html</loc>
+    <lastmod>2026-04-05</lastmod>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://brianward-com.pages.dev/areas/escondido.html</loc>
-    <lastmod>2026-03-31</lastmod>
+    <loc>https://www.brianward.com/areas/banning.html</loc>
+    <lastmod>2026-04-05</lastmod>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://brianward-com.pages.dev/areas/el-cajon.html</loc>
-    <lastmod>2026-03-31</lastmod>
+    <loc>https://www.brianward.com/areas/beaumont.html</loc>
+    <lastmod>2026-04-05</lastmod>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://brianward-com.pages.dev/areas/carlsbad.html</loc>
-    <lastmod>2026-03-31</lastmod>
+    <loc>https://www.brianward.com/areas/bonita.html</loc>
+    <lastmod>2026-04-05</lastmod>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://brianward-com.pages.dev/areas/vista.html</loc>
-    <lastmod>2026-03-31</lastmod>
+    <loc>https://www.brianward.com/areas/calimesa.html</loc>
+    <lastmod>2026-04-05</lastmod>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://brianward-com.pages.dev/areas/san-marcos.html</loc>
-    <lastmod>2026-03-31</lastmod>
+    <loc>https://www.brianward.com/areas/canyon-lake.html</loc>
+    <lastmod>2026-04-05</lastmod>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://brianward-com.pages.dev/areas/national-city.html</loc>
-    <lastmod>2026-03-31</lastmod>
+    <loc>https://www.brianward.com/areas/cardiff.html</loc>
+    <lastmod>2026-04-05</lastmod>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://brianward-com.pages.dev/areas/encinitas.html</loc>
-    <lastmod>2026-03-31</lastmod>
+    <loc>https://www.brianward.com/areas/carlsbad.html</loc>
+    <lastmod>2026-04-05</lastmod>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://brianward-com.pages.dev/areas/la-mesa.html</loc>
-    <lastmod>2026-03-31</lastmod>
+    <loc>https://www.brianward.com/areas/chula-vista.html</loc>
+    <lastmod>2026-04-05</lastmod>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://brianward-com.pages.dev/areas/santee.html</loc>
-    <lastmod>2026-03-31</lastmod>
+    <loc>https://www.brianward.com/areas/corona.html</loc>
+    <lastmod>2026-04-05</lastmod>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://brianward-com.pages.dev/areas/poway.html</loc>
-    <lastmod>2026-03-31</lastmod>
+    <loc>https://www.brianward.com/areas/coronado.html</loc>
+    <lastmod>2026-04-05</lastmod>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://brianward-com.pages.dev/areas/la-jolla.html</loc>
-    <lastmod>2026-03-31</lastmod>
+    <loc>https://www.brianward.com/areas/de-luz.html</loc>
+    <lastmod>2026-04-05</lastmod>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://brianward-com.pages.dev/areas/imperial-beach.html</loc>
-    <lastmod>2026-03-31</lastmod>
+    <loc>https://www.brianward.com/areas/del-mar.html</loc>
+    <lastmod>2026-04-05</lastmod>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://brianward-com.pages.dev/areas/coronado.html</loc>
-    <lastmod>2026-03-31</lastmod>
+    <loc>https://www.brianward.com/areas/descanso.html</loc>
+    <lastmod>2026-04-05</lastmod>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://brianward-com.pages.dev/areas/lemon-grove.html</loc>
-    <lastmod>2026-03-31</lastmod>
+    <loc>https://www.brianward.com/areas/eastvale.html</loc>
+    <lastmod>2026-04-05</lastmod>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://brianward-com.pages.dev/areas/solana-beach.html</loc>
-    <lastmod>2026-03-31</lastmod>
+    <loc>https://www.brianward.com/areas/el-cajon.html</loc>
+    <lastmod>2026-04-05</lastmod>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://brianward-com.pages.dev/areas/del-mar.html</loc>
-    <lastmod>2026-03-31</lastmod>
+    <loc>https://www.brianward.com/areas/encinitas.html</loc>
+    <lastmod>2026-04-05</lastmod>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://brianward-com.pages.dev/areas/alpine.html</loc>
-    <lastmod>2026-03-31</lastmod>
+    <loc>https://www.brianward.com/areas/escondido.html</loc>
+    <lastmod>2026-04-05</lastmod>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://brianward-com.pages.dev/areas/bonsall.html</loc>
-    <lastmod>2026-03-31</lastmod>
+    <loc>https://www.brianward.com/areas/fallbrook.html</loc>
+    <lastmod>2026-04-05</lastmod>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://brianward-com.pages.dev/areas/borrego-springs.html</loc>
-    <lastmod>2026-03-31</lastmod>
+    <loc>https://www.brianward.com/areas/french-valley.html</loc>
+    <lastmod>2026-04-05</lastmod>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://brianward-com.pages.dev/areas/boulevard.html</loc>
-    <lastmod>2026-03-31</lastmod>
+    <loc>https://www.brianward.com/areas/hemet.html</loc>
+    <lastmod>2026-04-05</lastmod>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://brianward-com.pages.dev/areas/campo.html</loc>
-    <lastmod>2026-03-31</lastmod>
+    <loc>https://www.brianward.com/areas/imperial-beach.html</loc>
+    <lastmod>2026-04-05</lastmod>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://brianward-com.pages.dev/areas/cardiff-by-the-sea.html</loc>
-    <lastmod>2026-03-31</lastmod>
+    <loc>https://www.brianward.com/areas/jamul.html</loc>
+    <lastmod>2026-04-05</lastmod>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://brianward-com.pages.dev/areas/del-dios.html</loc>
-    <lastmod>2026-03-31</lastmod>
+    <loc>https://www.brianward.com/areas/jurupa-valley.html</loc>
+    <lastmod>2026-04-05</lastmod>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://brianward-com.pages.dev/areas/descanso.html</loc>
-    <lastmod>2026-03-31</lastmod>
+    <loc>https://www.brianward.com/areas/la-jolla.html</loc>
+    <lastmod>2026-04-05</lastmod>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://brianward-com.pages.dev/areas/duvall.html</loc>
-    <lastmod>2026-03-31</lastmod>
+    <loc>https://www.brianward.com/areas/la-mesa.html</loc>
+    <lastmod>2026-04-05</lastmod>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://brianward-com.pages.dev/areas/eucalyptus-hills.html</loc>
-    <lastmod>2026-03-31</lastmod>
+    <loc>https://www.brianward.com/areas/lake-elsinore.html</loc>
+    <lastmod>2026-04-05</lastmod>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://brianward-com.pages.dev/areas/fallbrook.html</loc>
-    <lastmod>2026-03-31</lastmod>
+    <loc>https://www.brianward.com/areas/lakeside.html</loc>
+    <lastmod>2026-04-05</lastmod>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://brianward-com.pages.dev/areas/guatay.html</loc>
-    <lastmod>2026-03-31</lastmod>
+    <loc>https://www.brianward.com/areas/lemon-grove.html</loc>
+    <lastmod>2026-04-05</lastmod>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://brianward-com.pages.dev/areas/harrah.html</loc>
-    <lastmod>2026-03-31</lastmod>
+    <loc>https://www.brianward.com/areas/menifee.html</loc>
+    <lastmod>2026-04-05</lastmod>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://brianward-com.pages.dev/areas/herby.html</loc>
-    <lastmod>2026-03-31</lastmod>
+    <loc>https://www.brianward.com/areas/moreno-valley.html</loc>
+    <lastmod>2026-04-05</lastmod>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://brianward-com.pages.dev/areas/hidden-valley.html</loc>
-    <lastmod>2026-03-31</lastmod>
+    <loc>https://www.brianward.com/areas/murrieta.html</loc>
+    <lastmod>2026-04-05</lastmod>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://brianward-com.pages.dev/areas/host.html</loc>
-    <lastmod>2026-03-31</lastmod>
+    <loc>https://www.brianward.com/areas/national-city.html</loc>
+    <lastmod>2026-04-05</lastmod>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://brianward-com.pages.dev/areas/jamul.html</loc>
-    <lastmod>2026-03-31</lastmod>
+    <loc>https://www.brianward.com/areas/norco.html</loc>
+    <lastmod>2026-04-05</lastmod>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://brianward-com.pages.dev/areas/julian.html</loc>
-    <lastmod>2026-03-31</lastmod>
+    <loc>https://www.brianward.com/areas/oceanside.html</loc>
+    <lastmod>2026-04-05</lastmod>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://brianward-com.pages.dev/areas/kelley-ranch.html</loc>
-    <lastmod>2026-03-31</lastmod>
+    <loc>https://www.brianward.com/areas/perris.html</loc>
+    <lastmod>2026-04-05</lastmod>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://brianward-com.pages.dev/areas/kensington.html</loc>
-    <lastmod>2026-03-31</lastmod>
+    <loc>https://www.brianward.com/areas/poway.html</loc>
+    <lastmod>2026-04-05</lastmod>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://brianward-com.pages.dev/areas/lakeside.html</loc>
-    <lastmod>2026-03-31</lastmod>
+    <loc>https://www.brianward.com/areas/rainbow.html</loc>
+    <lastmod>2026-04-05</lastmod>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://brianward-com.pages.dev/areas/lawson-valley.html</loc>
-    <lastmod>2026-03-31</lastmod>
+    <loc>https://www.brianward.com/areas/ramona.html</loc>
+    <lastmod>2026-04-05</lastmod>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://brianward-com.pages.dev/areas/leona-valley.html</loc>
-    <lastmod>2026-03-31</lastmod>
+    <loc>https://www.brianward.com/areas/rancho-santa-fe.html</loc>
+    <lastmod>2026-04-05</lastmod>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://brianward-com.pages.dev/areas/los-penesquitos.html</loc>
-    <lastmod>2026-03-31</lastmod>
+    <loc>https://www.brianward.com/areas/riverside.html</loc>
+    <lastmod>2026-04-05</lastmod>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://brianward-com.pages.dev/areas/mount-laguna.html</loc>
-    <lastmod>2026-03-31</lastmod>
+    <loc>https://www.brianward.com/areas/san-diego.html</loc>
+    <lastmod>2026-04-05</lastmod>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://brianward-com.pages.dev/areas/mule-hill.html</loc>
-    <lastmod>2026-03-31</lastmod>
+    <loc>https://www.brianward.com/areas/san-jacinto.html</loc>
+    <lastmod>2026-04-05</lastmod>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://brianward-com.pages.dev/areas/newtown.html</loc>
-    <lastmod>2026-03-31</lastmod>
+    <loc>https://www.brianward.com/areas/san-marcos.html</loc>
+    <lastmod>2026-04-05</lastmod>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://brianward-com.pages.dev/areas/oaks.html</loc>
-    <lastmod>2026-03-31</lastmod>
+    <loc>https://www.brianward.com/areas/san-ysidro.html</loc>
+    <lastmod>2026-04-05</lastmod>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://brianward-com.pages.dev/areas/pala.html</loc>
-    <lastmod>2026-03-31</lastmod>
+    <loc>https://www.brianward.com/areas/santee.html</loc>
+    <lastmod>2026-04-05</lastmod>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://brianward-com.pages.dev/areas/palomar-mountain.html</loc>
-    <lastmod>2026-03-31</lastmod>
+    <loc>https://www.brianward.com/areas/solana-beach.html</loc>
+    <lastmod>2026-04-05</lastmod>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://brianward-com.pages.dev/areas/pauma-valley.html</loc>
-    <lastmod>2026-03-31</lastmod>
+    <loc>https://www.brianward.com/areas/spring-valley.html</loc>
+    <lastmod>2026-04-05</lastmod>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://brianward-com.pages.dev/areas/pine-valley.html</loc>
-    <lastmod>2026-03-31</lastmod>
+    <loc>https://www.brianward.com/areas/sun-city.html</loc>
+    <lastmod>2026-04-05</lastmod>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://brianward-com.pages.dev/areas/potrero.html</loc>
-    <lastmod>2026-03-31</lastmod>
+    <loc>https://www.brianward.com/areas/temecula.html</loc>
+    <lastmod>2026-04-05</lastmod>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://brianward-com.pages.dev/areas/ramona.html</loc>
-    <lastmod>2026-03-31</lastmod>
+    <loc>https://www.brianward.com/areas/valley-center.html</loc>
+    <lastmod>2026-04-05</lastmod>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://brianward-com.pages.dev/areas/rancho-penasquitos.html</loc>
-    <lastmod>2026-03-31</lastmod>
+    <loc>https://www.brianward.com/areas/vista.html</loc>
+    <lastmod>2026-04-05</lastmod>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://brianward-com.pages.dev/areas/rancho-santa-fe.html</loc>
-    <lastmod>2026-03-31</lastmod>
+    <loc>https://www.brianward.com/areas/wildomar.html</loc>
+    <lastmod>2026-04-05</lastmod>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://brianward-com.pages.dev/areas/ranchita.html</loc>
-    <lastmod>2026-03-31</lastmod>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://brianward-com.pages.dev/areas/requesens.html</loc>
-    <lastmod>2026-03-31</lastmod>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://brianward-com.pages.dev/areas/san-ysidro.html</loc>
-    <lastmod>2026-03-31</lastmod>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://brianward-com.pages.dev/areas/santa-ysabel.html</loc>
-    <lastmod>2026-03-31</lastmod>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://brianward-com.pages.dev/areas/saratoga-springs.html</loc>
-    <lastmod>2026-03-31</lastmod>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://brianward-com.pages.dev/areas/spring-valley.html</loc>
-    <lastmod>2026-03-31</lastmod>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://brianward-com.pages.dev/areas/sunland-park.html</loc>
-    <lastmod>2026-03-31</lastmod>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://brianward-com.pages.dev/areas/tecate.html</loc>
-    <lastmod>2026-03-31</lastmod>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://brianward-com.pages.dev/areas/terracina.html</loc>
-    <lastmod>2026-03-31</lastmod>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://brianward-com.pages.dev/areas/tierra-santa.html</loc>
-    <lastmod>2026-03-31</lastmod>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://brianward-com.pages.dev/areas/valley-center.html</loc>
-    <lastmod>2026-03-31</lastmod>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://brianward-com.pages.dev/areas/valley-green.html</loc>
-    <lastmod>2026-03-31</lastmod>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://brianward-com.pages.dev/areas/vista-santa-fe.html</loc>
-    <lastmod>2026-03-31</lastmod>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://brianward-com.pages.dev/areas/warner-springs.html</loc>
-    <lastmod>2026-03-31</lastmod>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://brianward-com.pages.dev/areas/warners-hot-springs.html</loc>
-    <lastmod>2026-03-31</lastmod>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://brianward-com.pages.dev/areas/whispering-pines.html</loc>
-    <lastmod>2026-03-31</lastmod>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://brianward-com.pages.dev/areas/wildomar.html</loc>
-    <lastmod>2026-03-31</lastmod>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://brianward-com.pages.dev/areas/williamson.html</loc>
-    <lastmod>2026-03-31</lastmod>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://brianward-com.pages.dev/areas/wynola.html</loc>
-    <lastmod>2026-03-31</lastmod>
+    <loc>https://www.brianward.com/areas/winchester.html</loc>
+    <lastmod>2026-04-05</lastmod>
     <priority>0.5</priority>
   </url>
 
   <!-- Policy Pages -->
   <url>
-    <loc>https://brianward-com.pages.dev/privacy-policy.html</loc>
-    <lastmod>2026-03-31</lastmod>
+    <loc>https://www.brianward.com/privacy-policy.html</loc>
+    <lastmod>2026-04-05</lastmod>
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://brianward-com.pages.dev/terms-of-use.html</loc>
-    <lastmod>2026-03-31</lastmod>
+    <loc>https://www.brianward.com/terms-of-use.html</loc>
+    <lastmod>2026-04-05</lastmod>
     <priority>0.3</priority>
   </url>
 </urlset>
