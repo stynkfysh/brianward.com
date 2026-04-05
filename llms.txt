@@ -36,6 +36,10 @@
 - [Reviews](https://www.brianward.com/reviews.html)
 - [Blog](https://www.brianward.com/blog.html)
 
+## Related Site
+
+- [date-of-death.com](https://www.date-of-death.com): Dedicated resource for date of death appraisals, IRS step-up in basis requirements, and retrospective property valuations. Operated by the same appraiser.
+
 ## Optional
 
 - [Full LLM context](https://www.brianward.com/llms-full.txt)
