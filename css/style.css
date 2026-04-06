@@ -703,12 +703,6 @@ table th {
         min-height: 100px;
     }
 
-    .logo-container {
-        background: rgba(255, 255, 255, 0.92);
-        padding: 10px 14px;
-        border-radius: 4px;
-    }
-
     .header-image {
         display: none;
     }
@@ -789,17 +783,6 @@ table th {
 @media (max-width: 480px) {
     body {
         font-size: 14px;
-    }
-
-    .site-header,
-    .header {
-        background-image: none;
-        background-color: #fff;
-    }
-
-    .logo-container {
-        background: none;
-        padding: 10px 0;
     }
 
     .header-inner,
