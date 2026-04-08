@@ -1,0 +1,1107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brian Ward Appraisal - Pricing Admin</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Login Form */
+        .login-container {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .login-container h1 {
+            color: #333;
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            text-align: center;
+        }
+
+        .login-container p {
+            color: #666;
+            font-size: 0.9rem;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            color: #333;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+
+        .form-group input:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+
+        .login-button {
+            width: 100%;
+            padding: 0.75rem;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .login-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
+        }
+
+        .login-button:active {
+            transform: translateY(0);
+        }
+
+        .login-error {
+            color: #dc3545;
+            font-size: 0.9rem;
+            margin-top: 1rem;
+            padding: 0.75rem;
+            background: #f8d7da;
+            border: 1px solid #f5c6cb;
+            border-radius: 4px;
+            display: none;
+        }
+
+        .login-error.show {
+            display: block;
+        }
+
+        /* Admin Interface */
+        .admin-container {
+            display: flex;
+            height: 100vh;
+            background: #f5f7fa;
+        }
+
+        .admin-sidebar {
+            width: 250px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 2rem;
+            overflow-y: auto;
+        }
+
+        .admin-sidebar h1 {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        .admin-sidebar p {
+            font-size: 0.8rem;
+            opacity: 0.9;
+            margin-bottom: 2rem;
+        }
+
+        .session-info {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 1rem;
+            border-radius: 4px;
+            margin-bottom: 2rem;
+            font-size: 0.85rem;
+        }
+
+        .session-info span {
+            display: block;
+            margin: 0.25rem 0;
+        }
+
+        .session-timeout-warning {
+            background: #ff6b6b;
+            padding: 0.75rem;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            margin-bottom: 2rem;
+            display: none;
+        }
+
+        .session-timeout-warning.show {
+            display: block;
+        }
+
+        .admin-nav {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .admin-nav button {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            border: none;
+            padding: 0.75rem 1rem;
+            border-radius: 4px;
+            cursor: pointer;
+            text-align: left;
+            transition: background 0.2s;
+            font-size: 0.9rem;
+        }
+
+        .admin-nav button:hover,
+        .admin-nav button.active {
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        .logout-button {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            border: none;
+            padding: 0.75rem 1rem;
+            border-radius: 4px;
+            cursor: pointer;
+            text-align: left;
+            transition: background 0.2s;
+            font-size: 0.9rem;
+            margin-top: auto;
+            width: 100%;
+        }
+
+        .logout-button:hover {
+            background: #dc3545;
+        }
+
+        .admin-main {
+            flex: 1;
+            overflow-y: auto;
+            padding: 2rem;
+        }
+
+        .admin-main h2 {
+            color: #333;
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+        }
+
+        .section {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        }
+
+        .section h3 {
+            color: #667eea;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #f0f0f0;
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group {
+            margin-bottom: 1rem;
+        }
+
+        .form-group label {
+            display: block;
+            color: #333;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+        }
+
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 0.6rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            font-family: inherit;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+
+        .currency-input {
+            position: relative;
+        }
+
+        .currency-input::before {
+            content: '$';
+            position: absolute;
+            left: 0.6rem;
+            top: 2.2rem;
+            color: #999;
+            font-weight: 500;
+        }
+
+        .currency-input input {
+            padding-left: 1.75rem;
+        }
+
+        .button-group {
+            display: flex;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .btn {
+            padding: 0.6rem 1rem;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: all 0.2s;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+        }
+
+        .btn-secondary {
+            background: #f0f0f0;
+            color: #333;
+        }
+
+        .btn-secondary:hover {
+            background: #e0e0e0;
+        }
+
+        .btn-danger {
+            background: #dc3545;
+            color: white;
+        }
+
+        .btn-danger:hover {
+            background: #c82333;
+        }
+
+        .btn-small {
+            padding: 0.4rem 0.8rem;
+            font-size: 0.8rem;
+        }
+
+        .promotion-item {
+            background: #f9f9f9;
+            padding: 1rem;
+            border-radius: 4px;
+            margin-bottom: 1rem;
+            border-left: 3px solid #667eea;
+        }
+
+        .promotion-item h4 {
+            color: #333;
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+        }
+
+        .promotion-details {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 0.5rem;
+            margin-bottom: 0.5rem;
+            font-size: 0.85rem;
+        }
+
+        .promotion-details span {
+            color: #666;
+        }
+
+        .promotion-details strong {
+            color: #333;
+        }
+
+        .preview-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+        }
+
+        .preview-table th,
+        .preview-table td {
+            padding: 0.75rem;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .preview-table th {
+            background: #f9f9f9;
+            font-weight: 600;
+            color: #333;
+        }
+
+        .preview-table tr:hover {
+            background: #f9f9f9;
+        }
+
+        .code-textarea {
+            width: 100%;
+            height: 300px;
+            padding: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-family: 'Monaco', 'Courier New', monospace;
+            font-size: 0.85rem;
+            resize: vertical;
+        }
+
+        .code-textarea:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+
+        .instructions {
+            background: #e7f3ff;
+            border: 1px solid #b3d9ff;
+            border-radius: 4px;
+            padding: 1rem;
+            margin-bottom: 2rem;
+            color: #004085;
+        }
+
+        .instructions h4 {
+            margin-bottom: 0.5rem;
+        }
+
+        .instructions ol {
+            margin-left: 1.5rem;
+            margin-top: 0.5rem;
+        }
+
+        .instructions li {
+            margin-bottom: 0.5rem;
+        }
+
+        .instructions a {
+            color: #004085;
+            font-weight: 600;
+        }
+
+        .success-message {
+            background: #d4edda;
+            border: 1px solid #c3e6cb;
+            color: #155724;
+            padding: 1rem;
+            border-radius: 4px;
+            margin-bottom: 1rem;
+            display: none;
+        }
+
+        .success-message.show {
+            display: block;
+        }
+
+        .changelog {
+            background: #f9f9f9;
+            padding: 1rem;
+            border-radius: 4px;
+            margin-top: 1rem;
+            font-size: 0.85rem;
+            font-family: 'Monaco', 'Courier New', monospace;
+            max-height: 200px;
+            overflow-y: auto;
+            color: #666;
+        }
+
+        .changelog-empty {
+            color: #999;
+            font-style: italic;
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        .hidden {
+            display: none !important;
+        }
+
+        @media (max-width: 768px) {
+            .admin-container {
+                flex-direction: column;
+            }
+
+            .admin-sidebar {
+                width: 100%;
+                padding: 1.5rem;
+            }
+
+            .admin-main {
+                padding: 1rem;
+            }
+
+            .pricing-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .promotion-details {
+                grid-template-columns: 1fr;
+            }
+
+            .button-group {
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Login Screen -->
+    <div id="loginContainer" class="login-container">
+        <h1>Brian Ward Appraisal</h1>
+        <p>Pricing Admin Portal</p>
+        <form id="loginForm" onsubmit="handleLogin(event)">
+            <div class="form-group">
+                <label for="password">Admin Password</label>
+                <input type="password" id="password" required autofocus>
+            </div>
+            <button type="submit" class="login-button">Sign In</button>
+            <div id="loginError" class="login-error"></div>
+        </form>
+    </div>
+
+    <!-- Admin Interface -->
+    <div id="adminContainer" class="admin-container hidden">
+        <!-- Sidebar -->
+        <div class="admin-sidebar">
+            <h1>Brian Ward Appraisal</h1>
+            <p>Pricing Admin</p>
+
+            <div class="session-info">
+                <span>Session Active</span>
+                <span id="sessionTimeout">Timeout: 30:00</span>
+            </div>
+
+            <div id="sessionWarning" class="session-timeout-warning">
+                Session expires soon. Click to stay logged in.
+            </div>
+
+            <div class="admin-nav">
+                <button class="nav-btn active" onclick="switchTab('pricing')">Service Pricing</button>
+                <button class="nav-btn" onclick="switchTab('addons')">Add-ons</button>
+                <button class="nav-btn" onclick="switchTab('promotions')">Promotions</button>
+                <button class="nav-btn" onclick="switchTab('preview')">Preview</button>
+                <button class="nav-btn" onclick="switchTab('export')">Export & Download</button>
+            </div>
+
+            <button class="logout-button" onclick="logout()">Sign Out</button>
+        </div>
+
+        <!-- Main Content -->
+        <div class="admin-main">
+            <div class="instructions">
+                <h4>How to Use This Editor</h4>
+                <ol>
+                    <li>Edit pricing values and promotions in the sections below</li>
+                    <li>Click "Preview" to see how it will look on your site</li>
+                    <li>Go to "Export & Download" to generate the pricing.js file</li>
+                    <li>Download and upload the file to your GitHub repository or CDN</li>
+                    <li>The website will automatically load the updated pricing</li>
+                </ol>
+            </div>
+
+            <!-- Service Pricing Tab -->
+            <div id="pricingTab" class="tab-content active">
+                <h2>Service Pricing</h2>
+                <div class="section">
+                    <h3>Appraisal Services</h3>
+                    <div class="pricing-grid">
+                        <div class="form-group currency-input">
+                            <label for="fnma1004">Standard Appraisal (FNMA 1004)</label>
+                            <input type="number" id="fnma1004" step="0.01" min="0">
+                        </div>
+                        <div class="form-group currency-input">
+                            <label for="fnma2055">Consumer Appraisal (FNMA 2055)</label>
+                            <input type="number" id="fnma2055" step="0.01" min="0">
+                        </div>
+                        <div class="form-group currency-input">
+                            <label for="fnma2005">Exterior/Drive-By (FNMA 2005)</label>
+                            <input type="number" id="fnma2005" step="0.01" min="0">
+                        </div>
+                        <div class="form-group currency-input">
+                            <label for="desktop">Desktop Appraisal</label>
+                            <input type="number" id="desktop" step="0.01" min="0">
+                        </div>
+                        <div class="form-group currency-input">
+                            <label for="multiunit">2-4 Unit Property</label>
+                            <input type="number" id="multiunit" step="0.01" min="0">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Add-ons Tab -->
+            <div id="addonsTab" class="tab-content">
+                <h2>Add-ons & Services</h2>
+                <div class="section">
+                    <h3>Rush Services</h3>
+                    <div class="form-group currency-input">
+                        <label for="rushService">1-Day Rush Service</label>
+                        <input type="number" id="rushService" step="0.01" min="0">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Promotions Tab -->
+            <div id="promotionsTab" class="tab-content">
+                <h2>Promotions & Discounts</h2>
+
+                <div class="section">
+                    <h3>Active Promotions</h3>
+                    <div id="promotionsList"></div>
+                </div>
+
+                <div class="section">
+                    <h3>Add New Promotion</h3>
+                    <div class="pricing-grid">
+                        <div class="form-group">
+                            <label for="promoName">Promotion Name</label>
+                            <input type="text" id="promoName" placeholder="e.g., Spring Special">
+                        </div>
+                        <div class="form-group">
+                            <label for="promoCode">Promo Code</label>
+                            <input type="text" id="promoCode" placeholder="e.g., SPRING2024">
+                        </div>
+                        <div class="form-group currency-input">
+                            <label for="promoDiscount">Discount Amount ($)</label>
+                            <input type="number" id="promoDiscount" step="0.01" min="0">
+                        </div>
+                        <div class="form-group">
+                            <label for="promoType">Discount Type</label>
+                            <select id="promoType">
+                                <option value="fixed">Fixed Amount</option>
+                                <option value="percentage">Percentage</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="promoActive">
+                            <input type="checkbox" id="promoActive" checked>
+                            Active
+                        </label>
+                    </div>
+                    <div class="button-group">
+                        <button class="btn btn-primary" onclick="addPromotion()">Add Promotion</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Preview Tab -->
+            <div id="previewTab" class="tab-content">
+                <h2>Pricing Preview</h2>
+                <div class="section">
+                    <h3>How Your Pricing Will Appear on the Site</h3>
+                    <table class="preview-table" id="previewTable">
+                        <thead>
+                            <tr>
+                                <th>Service</th>
+                                <th>Price</th>
+                            </tr>
+                        </thead>
+                        <tbody id="previewBody"></tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Export Tab -->
+            <div id="exportTab" class="tab-content">
+                <h2>Export & Download</h2>
+
+                <div class="section">
+                    <h3>Changes Made</h3>
+                    <div id="successMessage" class="success-message"></div>
+                    <div class="changelog" id="changelog">
+                        <span class="changelog-empty">No changes yet. Edit pricing values to see them here.</span>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h3>Generated pricing.js</h3>
+                    <p style="color: #666; margin-bottom: 1rem; font-size: 0.9rem;">
+                        Copy the code below and save it as <code>pricing.js</code> in your project, then upload to your repository or CDN.
+                    </p>
+                    <textarea class="code-textarea" id="codeOutput" readonly></textarea>
+                    <div class="button-group" style="margin-top: 1rem;">
+                        <button class="btn btn-primary" onclick="copyToClipboard()">Copy to Clipboard</button>
+                        <button class="btn btn-primary" onclick="downloadPricingJS()">Download pricing.js</button>
+                        <button class="btn btn-secondary" onclick="resetChanges()">Reset Changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Configuration
+        const CONFIG = {
+            PASSWORD_HASH: 'c1b8f8e3e8e7c8d3e8f8e3e8e7c8d3e8f8e3e8e7c8d3e8f8e3e8e7c8d3',
+            SESSION_TIMEOUT: 30 * 60 * 1000, // 30 minutes
+            WARNING_TIME: 5 * 60 * 1000, // 5 minutes before timeout
+        };
+
+        // State
+        let isLoggedIn = false;
+        let sessionTimer = null;
+        let warningShown = false;
+        let originalPricing = {};
+        let currentPricing = {};
+        let changes = [];
+
+        // Initialize
+        window.addEventListener('DOMContentLoaded', initializePage);
+
+        function initializePage() {
+            // Try to restore session from sessionStorage
+            const sessionToken = sessionStorage.getItem('adminSession');
+            if (sessionToken && isValidSession(sessionToken)) {
+                showAdmin();
+            } else {
+                showLogin();
+            }
+        }
+
+        function isValidSession(token) {
+            const stored = sessionStorage.getItem('sessionExpiry');
+            return stored && parseInt(stored) > Date.now();
+        }
+
+        async function handleLogin(event) {
+            event.preventDefault();
+            const passwordInput = document.getElementById('password');
+            const password = passwordInput.value;
+            const errorDiv = document.getElementById('loginError');
+
+            try {
+                const hash = await hashPassword(password);
+                const targetHash = await hashPassword('BrianWard2024!');
+
+                if (hash === targetHash) {
+                    // Login successful
+                    const sessionToken = generateSessionToken();
+                    sessionStorage.setItem('adminSession', sessionToken);
+                    sessionStorage.setItem('sessionExpiry', Date.now() + CONFIG.SESSION_TIMEOUT);
+                    passwordInput.value = '';
+                    errorDiv.classList.remove('show');
+                    showAdmin();
+                    startSessionTimer();
+                } else {
+                    errorDiv.textContent = 'Invalid password. Please try again.';
+                    errorDiv.classList.add('show');
+                    passwordInput.select();
+                }
+            } catch (error) {
+                console.error('Login error:', error);
+                errorDiv.textContent = 'An error occurred. Please try again.';
+                errorDiv.classList.add('show');
+            }
+        }
+
+        async function hashPassword(password) {
+            const encoder = new TextEncoder();
+            const data = encoder.encode(password);
+            const hashBuffer = await crypto.subtle.digest('SHA-256', data);
+            const hashArray = Array.from(new Uint8Array(hashBuffer));
+            return hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+        }
+
+        function generateSessionToken() {
+            return 'session_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
+        }
+
+        function showLogin() {
+            document.getElementById('loginContainer').classList.remove('hidden');
+            document.getElementById('adminContainer').classList.add('hidden');
+            isLoggedIn = false;
+        }
+
+        function showAdmin() {
+            document.getElementById('loginContainer').classList.add('hidden');
+            document.getElementById('adminContainer').classList.remove('hidden');
+            isLoggedIn = true;
+            loadPricingData();
+        }
+
+        function loadPricingData() {
+            // Initialize with default values (these would come from pricing.js in production)
+            const defaultPricing = {
+                fnma1004: 450,
+                fnma2055: 350,
+                fnma2005: 250,
+                desktop: 200,
+                multiunit: 600,
+                rushService: 150,
+                promotions: [
+                    {
+                        id: 'promo1',
+                        name: 'Spring Special',
+                        code: 'SPRING2024',
+                        discount: 50,
+                        type: 'fixed',
+                        active: true
+                    }
+                ]
+            };
+
+            originalPricing = JSON.parse(JSON.stringify(defaultPricing));
+            currentPricing = JSON.parse(JSON.stringify(defaultPricing));
+            changes = [];
+
+            // Populate form fields
+            document.getElementById('fnma1004').value = currentPricing.fnma1004;
+            document.getElementById('fnma2055').value = currentPricing.fnma2055;
+            document.getElementById('fnma2005').value = currentPricing.fnma2005;
+            document.getElementById('desktop').value = currentPricing.desktop;
+            document.getElementById('multiunit').value = currentPricing.multiunit;
+            document.getElementById('rushService').value = currentPricing.rushService;
+
+            renderPromotions();
+            updatePreview();
+            generateCode();
+            trackChanges();
+
+            // Add event listeners for real-time updates
+            ['fnma1004', 'fnma2055', 'fnma2005', 'desktop', 'multiunit', 'rushService'].forEach(id => {
+                document.getElementById(id).addEventListener('change', () => {
+                    currentPricing[id] = parseFloat(document.getElementById(id).value) || 0;
+                    updatePreview();
+                    generateCode();
+                    trackChanges();
+                });
+            });
+        }
+
+        function renderPromotions() {
+            const container = document.getElementById('promotionsList');
+            if (currentPricing.promotions.length === 0) {
+                container.innerHTML = '<p style="color: #999; font-style: italic;">No active promotions</p>';
+                return;
+            }
+
+            container.innerHTML = currentPricing.promotions.map((promo, index) => `
+                <div class="promotion-item">
+                    <h4>${promo.name}</h4>
+                    <div class="promotion-details">
+                        <div><strong>Code:</strong> <span>${promo.code}</span></div>
+                        <div><strong>Discount:</strong> <span>${promo.type === 'percentage' ? promo.discount + '%' : '$' + promo.discount.toFixed(2)}</span></div>
+                        <div><strong>Status:</strong> <span>${promo.active ? 'Active' : 'Inactive'}</span></div>
+                    </div>
+                    <div class="button-group">
+                        <button class="btn btn-secondary btn-small" onclick="editPromotion(${index})">Edit</button>
+                        <button class="btn btn-danger btn-small" onclick="deletePromotion(${index})">Delete</button>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function addPromotion() {
+            const name = document.getElementById('promoName').value.trim();
+            const code = document.getElementById('promoCode').value.trim().toUpperCase();
+            const discount = parseFloat(document.getElementById('promoDiscount').value) || 0;
+            const type = document.getElementById('promoType').value;
+            const active = document.getElementById('promoActive').checked;
+
+            if (!name || !code || discount <= 0) {
+                alert('Please fill in all promotion fields');
+                return;
+            }
+
+            const newPromo = {
+                id: 'promo_' + Date.now(),
+                name,
+                code,
+                discount,
+                type,
+                active
+            };
+
+            currentPricing.promotions.push(newPromo);
+
+            // Clear form
+            document.getElementById('promoName').value = '';
+            document.getElementById('promoCode').value = '';
+            document.getElementById('promoDiscount').value = '';
+            document.getElementById('promoType').value = 'fixed';
+            document.getElementById('promoActive').checked = true;
+
+            renderPromotions();
+            generateCode();
+            trackChanges();
+        }
+
+        function deletePromotion(index) {
+            if (confirm('Delete this promotion?')) {
+                currentPricing.promotions.splice(index, 1);
+                renderPromotions();
+                generateCode();
+                trackChanges();
+            }
+        }
+
+        function editPromotion(index) {
+            const promo = currentPricing.promotions[index];
+            document.getElementById('promoName').value = promo.name;
+            document.getElementById('promoCode').value = promo.code;
+            document.getElementById('promoDiscount').value = promo.discount;
+            document.getElementById('promoType').value = promo.type;
+            document.getElementById('promoActive').checked = promo.active;
+
+            deletePromotion(index);
+            switchTab('promotions');
+            document.getElementById('promoName').focus();
+        }
+
+        function updatePreview() {
+            const tbody = document.getElementById('previewBody');
+            const items = [
+                { name: 'Standard Appraisal (FNMA 1004)', price: currentPricing.fnma1004 },
+                { name: 'Consumer Appraisal (FNMA 2055)', price: currentPricing.fnma2055 },
+                { name: 'Exterior/Drive-By (FNMA 2005)', price: currentPricing.fnma2005 },
+                { name: 'Desktop Appraisal', price: currentPricing.desktop },
+                { name: '2-4 Unit Property', price: currentPricing.multiunit },
+                { name: '1-Day Rush Service (Add-on)', price: currentPricing.rushService },
+            ];
+
+            tbody.innerHTML = items.map(item => `
+                <tr>
+                    <td>${item.name}</td>
+                    <td><strong>$${item.price.toFixed(2)}</strong></td>
+                </tr>
+            `).join('');
+
+            if (currentPricing.promotions.some(p => p.active)) {
+                tbody.innerHTML += '<tr style="background: #f0f0f0;"><td colspan="2"><strong>Active Promotions:</strong></td></tr>';
+                currentPricing.promotions.filter(p => p.active).forEach(promo => {
+                    const discount = promo.type === 'percentage' ? promo.discount + '%' : '$' + promo.discount.toFixed(2);
+                    tbody.innerHTML += `<tr style="background: #f9f9f9;"><td>${promo.name} (${promo.code})</td><td>${discount} off</td></tr>`;
+                });
+            }
+        }
+
+        function generateCode() {
+            const pricingData = {
+                services: {
+                    fnma1004: currentPricing.fnma1004,
+                    fnma2055: currentPricing.fnma2055,
+                    fnma2005: currentPricing.fnma2005,
+                    desktop: currentPricing.desktop,
+                    multiunit: currentPricing.multiunit,
+                },
+                addons: {
+                    rushService: currentPricing.rushService,
+                },
+                promotions: currentPricing.promotions,
+                lastUpdated: new Date().toISOString(),
+            };
+
+            const code = `// Pricing data for Brian Ward Appraisal
+// Last updated: ${new Date().toLocaleString()}
+// Auto-generated by Pricing Admin Panel
+
+const PRICING_DATA = ${JSON.stringify(pricingData, null, 2)};
+
+// Export for module systems
+if (typeof module !== 'undefined' && module.exports) {
+    module.exports = PRICING_DATA;
+}
+`;
+
+            document.getElementById('codeOutput').value = code;
+        }
+
+        function trackChanges() {
+            changes = [];
+
+            // Track pricing changes
+            ['fnma1004', 'fnma2055', 'fnma2005', 'desktop', 'multiunit', 'rushService'].forEach(key => {
+                if (originalPricing[key] !== currentPricing[key]) {
+                    changes.push(`${key}: $${originalPricing[key].toFixed(2)} → $${currentPricing[key].toFixed(2)}`);
+                }
+            });
+
+            // Track promotion changes
+            if (JSON.stringify(originalPricing.promotions) !== JSON.stringify(currentPricing.promotions)) {
+                changes.push(`Promotions updated (${currentPricing.promotions.length} active)`);
+            }
+
+            updateChangelog();
+        }
+
+        function updateChangelog() {
+            const changelog = document.getElementById('changelog');
+            if (changes.length === 0) {
+                changelog.innerHTML = '<span class="changelog-empty">No changes yet. Edit pricing values to see them here.</span>';
+            } else {
+                changelog.innerHTML = changes.map((change, i) => `${i + 1}. ${change}`).join('\n');
+            }
+        }
+
+        function switchTab(tabName) {
+            // Hide all tabs
+            document.querySelectorAll('.tab-content').forEach(tab => {
+                tab.classList.remove('active');
+            });
+
+            // Deactivate all buttons
+            document.querySelectorAll('.nav-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+
+            // Show selected tab
+            const tabMap = {
+                'pricing': 'pricingTab',
+                'addons': 'addonsTab',
+                'promotions': 'promotionsTab',
+                'preview': 'previewTab',
+                'export': 'exportTab'
+            };
+
+            document.getElementById(tabMap[tabName]).classList.add('active');
+
+            // Activate button
+            event.target.classList.add('active');
+        }
+
+        function copyToClipboard() {
+            const textarea = document.getElementById('codeOutput');
+            textarea.select();
+            document.execCommand('copy');
+
+            const successDiv = document.getElementById('successMessage');
+            successDiv.textContent = 'Code copied to clipboard!';
+            successDiv.classList.add('show');
+
+            setTimeout(() => {
+                successDiv.classList.remove('show');
+            }, 3000);
+        }
+
+        function downloadPricingJS() {
+            const code = document.getElementById('codeOutput').value;
+            const blob = new Blob([code], { type: 'text/javascript' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'pricing.js';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+        }
+
+        function resetChanges() {
+            if (confirm('Reset all changes? This will revert to the last saved pricing.')) {
+                currentPricing = JSON.parse(JSON.stringify(originalPricing));
+                loadPricingData();
+            }
+        }
+
+        function startSessionTimer() {
+            clearInterval(sessionTimer);
+            warningShown = false;
+            updateSessionDisplay();
+
+            sessionTimer = setInterval(() => {
+                const expiry = parseInt(sessionStorage.getItem('sessionExpiry'));
+                const remaining = expiry - Date.now();
+
+                if (remaining <= 0) {
+                    clearInterval(sessionTimer);
+                    logout();
+                } else if (remaining <= CONFIG.WARNING_TIME && !warningShown) {
+                    document.getElementById('sessionWarning').classList.add('show');
+                    warningShown = true;
+                }
+
+                updateSessionDisplay();
+            }, 1000);
+
+            // Reset timer on user activity
+            ['click', 'keypress', 'mousemove'].forEach(event => {
+                document.addEventListener(event, extendSession, true);
+            });
+        }
+
+        function extendSession() {
+            if (isLoggedIn) {
+                sessionStorage.setItem('sessionExpiry', Date.now() + CONFIG.SESSION_TIMEOUT);
+                document.getElementById('sessionWarning').classList.remove('show');
+                warningShown = false;
+            }
+        }
+
+        function updateSessionDisplay() {
+            const expiry = parseInt(sessionStorage.getItem('sessionExpiry'));
+            const remaining = Math.max(0, expiry - Date.now());
+            const minutes = Math.floor(remaining / 60000);
+            const seconds = Math.floor((remaining % 60000) / 1000);
+            document.getElementById('sessionTimeout').textContent = `Timeout: ${minutes}:${seconds.toString().padStart(2, '0')}`;
+        }
+
+        function logout() {
+            sessionStorage.removeItem('adminSession');
+            sessionStorage.removeItem('sessionExpiry');
+            clearInterval(sessionTimer);
+            showLogin();
+        }
+    </script>
+</body>
+</html>

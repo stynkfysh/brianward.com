@@ -1,0 +1,103 @@
+# Cloudflare Pages Redirects
+# Maps old brianward.com URLs to new site structure
+# Format: old_path new_path status_code
+
+# Main pages
+/appraisal-service-area.html /service-area.html 301
+/appraisal-service-area.old.html /service-area.html 301
+/how-to-contact-us.html /contact.html 301
+/Brian-Ward-Appraisal-Blog.html /blog.html 301
+/Brian-Ward-Appraisal-FAQ.html /faq.html 301
+/Appraiser-Reviews/ /reviews.html 301
+/Appraiser-Reviews/index.html /reviews.html 301
+/Brian-Ward-Appraisal-Locations.html /service-area.html 301
+/Mobile/Default.html / 301
+
+# Service pages
+/Bankruptcy/index.html /bankruptcy-appraisal.html 301
+/Bankruptcy/ /bankruptcy-appraisal.html 301
+/Date-of-Death/index.html /date-of-death-appraisal.html 301
+/Date-of-Death/ /date-of-death-appraisal.html 301
+/Divorce-Appraiser/ /divorce-appraisal.html 301
+/Divorce-Appraiser/index.html /divorce-appraisal.html 301
+
+# San Diego County area pages
+/Alpine/Appraiser/Alpine.html /areas/alpine.html 301
+/Bonita/Appraiser/Bonita.html /areas/bonita.html 301
+/Cardiff-By-The-Sea/Appraiser/Cardiff-By-The-Sea.html /areas/cardiff.html 301
+/Carlsbad/Appraiser/Carlsbad.html /areas/carlsbad.html 301
+/Chula-Vista/Appraiser/Chula-Vista.html /areas/chula-vista.html 301
+/Coronado/Appraiser/Coronado.html /areas/coronado.html 301
+/Del-Mar/Appraiser/Del-Mar.html /areas/del-mar.html 301
+/Descanso/Appraiser/Descanso.html /areas/descanso.html 301
+/El-Cajon/Appraiser/El-Cajon.html /areas/el-cajon.html 301
+/Encinitas/Appraiser/Encinitas.html /areas/encinitas.html 301
+/Escondido/Appraiser/Escondido.html /areas/escondido.html 301
+/Fallbrook/Appraiser/Fallbrook.html /areas/fallbrook.html 301
+/Imperial-Beach/Appraiser/Imperial-Beach.html /areas/imperial-beach.html 301
+/Jamul/Appraiser/Jamul.html /areas/jamul.html 301
+/La-Jolla/Appraiser/La-Jolla.html /areas/la-jolla.html 301
+/La-Mesa/Appraiser/La-Mesa.html /areas/la-mesa.html 301
+/Lakeside/Appraiser/Lakeside.html /areas/lakeside.html 301
+/Lemon-Grove/Appraiser/Lemon-Grove.html /areas/lemon-grove.html 301
+/National-City/Appraiser/National-City.html /areas/national-city.html 301
+/Oceanside/Appraiser/Oceanside.html /areas/oceanside.html 301
+/Poway/Appraiser/Poway.html /areas/poway.html 301
+/Ramona/Appraiser/Ramona.html /areas/ramona.html 301
+/Rancho-Santa-Fe/Appraiser/Rancho-Santa-Fe.html /areas/rancho-santa-fe.html 301
+/San-Diego/Appraiser/San-Diego.html /areas/san-diego.html 301
+/San-Marcos/Appraiser/San-Marcos.html /areas/san-marcos.html 301
+/San-Ysidro/Appraiser/San-Ysidro.html /areas/san-ysidro.html 301
+/Santee/Appraiser/Santee.html /areas/santee.html 301
+/Solana-Beach/Appraiser/Solana-Beach.html /areas/solana-beach.html 301
+/Spring-Valley/Appraiser/Spring-Valley.html /areas/spring-valley.html 301
+/Valley-Center/Appraiser/Valley-Center.html /areas/valley-center.html 301
+/Vista/Appraiser/Vista.html /areas/vista.html 301
+
+# New area pages (no old-site equivalent confirmed, but adding for completeness)
+/Aguanga/Appraiser/Aguanga.html /areas/aguanga.html 301
+/Anza/Appraiser/Anza.html /areas/anza.html 301
+/Canyon-Lake/Appraiser/Canyon-Lake.html /areas/canyon-lake.html 301
+/De-Luz/Appraiser/De-Luz.html /areas/de-luz.html 301
+/Eastvale/Appraiser/Eastvale.html /areas/eastvale.html 301
+/French-Valley/Appraiser/French-Valley.html /areas/french-valley.html 301
+/Jurupa-Valley/Appraiser/Jurupa-Valley.html /areas/jurupa-valley.html 301
+/Rainbow/Appraiser/Rainbow.html /areas/rainbow.html 301
+
+# Riverside County area pages
+/Banning/Appraiser/Banning.html /areas/banning.html 301
+/Beaumont/Appraiser/Beaumont.html /areas/beaumont.html 301
+/Calimesa/Appraiser/Calimesa.html /areas/calimesa.html 301
+/Corona/Appraiser/Corona.html /areas/corona.html 301
+/Hemet/Appraiser/Hemet.html /areas/hemet.html 301
+/Lake-Elsinore/Appraiser/Lake-Elsinore.html /areas/lake-elsinore.html 301
+/Menifee/Appraiser/Menifee.html /areas/menifee.html 301
+/Moreno-Valley/Appraiser/Moreno-Valley.html /areas/moreno-valley.html 301
+/Murrieta/Appraiser/Murrieta.html /areas/murrieta.html 301
+/Norco/Appraiser/Norco.html /areas/norco.html 301
+/Perris/Appraiser/Perris.html /areas/perris.html 301
+/Riverside/Appraiser/Riverside.html /areas/riverside.html 301
+/San-Jacinto/Appraiser/San-Jacinto.html /areas/san-jacinto.html 301
+/Sun-City/Appraiser/Sun-City.html /areas/sun-city.html 301
+/Temecula/Appraiser/Temecula.html /areas/temecula.html 301
+/Wildomar/Appraiser/Wildomar.html /areas/wildomar.html 301
+/Winchester/Appraiser/Winchester.html /areas/winchester.html 301
+
+# Riverside area pages that don't have new equivalents - redirect to service area
+/Cathedral-City/Appraiser/Cathedral-City.html /service-area.html 301
+/Coachella/Appraiser/Coachella.html /service-area.html 301
+/Desert-Hot-Springs/Appraiser/Desert-Hot-Springs.html /service-area.html 301
+/Homeland/Appraiser/Homeland.html /service-area.html 301
+/Indian-Wells/Appraiser/Indian-Wells.html /service-area.html 301
+/Indio/Appraiser/Indio.html /service-area.html 301
+/La-Quinta/Appraiser/La-Quinta.html /service-area.html 301
+/Lincoln-Acres/Appraiser/Lincoln-Acres.html /service-area.html 301
+/Mira-Loma/Appraiser/Mira-Loma.html /service-area.html 301
+/Nuevo/Appraiser/Nuevo.html /service-area.html 301
+/Palm-Desert/Appraiser/Palm-Desert.html /service-area.html 301
+/Palm-Springs/Appraiser/Palm-Springs.html /service-area.html 301
+/Rancho-Mirage/Appraiser/Rancho-Mirage.html /service-area.html 301
+
+# City-specific bankruptcy and date-of-death query string pages
+# Cloudflare Pages _redirects don't support query strings,
+# but the base paths are covered above
