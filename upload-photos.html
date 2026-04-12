@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Upload property photos for your appraisal. Secure, easy photo submission for date of death, divorce, estate, and all appraisal types.">
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="canonical" href="https://www.brianward.com/upload-photos.html">
+    <title>Upload Property Photos | Brian Ward Appraisal</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <style>
+        /* Upload page specific styles */
+        .upload-intro {
+            margin-bottom: 28px;
+            color: #444;
+            line-height: 1.7;
+        }
+
+        .photo-instructions {
+            background: #faf7f4;
+            border: 1px solid #e0d5ca;
+            border-radius: 8px;
+            padding: 24px 28px;
+            margin-bottom: 28px;
+        }
+        .photo-instructions h3 {
+            margin: 0 0 10px;
+            font-size: 17px;
+            color: #1a1a1a;
+        }
+        .photo-instructions h4 {
+            color: #8b4513;
+            margin: 16px 0 6px;
+            font-size: 15px;
+        }
+        .photo-instructions ul {
+            margin: 0 0 4px;
+            padding-left: 20px;
+            color: #444;
+            line-height: 1.75;
+        }
+        .photo-instructions ul li {
+            margin-bottom: 4px;
+        }
+        .photo-instructions .photo-tip {
+            margin-top: 14px;
+            font-size: 14px;
+            color: #666;
+            font-style: italic;
+        }
+
+        /* Form sections */
+        .form-section {
+            border: 1px solid #e0d5ca;
+            border-radius: 8px;
+            padding: 20px 24px;
+            margin-bottom: 24px;
+            background: #fff;
+        }
+        .form-section legend {
+            font-weight: 700;
+            font-size: 16px;
+            color: #1a1a1a;
+            padding: 0 8px;
+        }
+        .form-row {
+            display: flex;
+            gap: 16px;
+        }
+        .form-group {
+            flex: 1;
+            margin-bottom: 12px;
+        }
+        .form-group.full-width {
+            flex-basis: 100%;
+        }
+        .form-group label {
+            display: block;
+            font-weight: 600;
+            margin: 0 0 4px;
+            font-size: 14px;
+            color: #333;
+        }
+        .form-group input[type="text"],
+        .form-group input[type="email"],
+        .form-group textarea {
+            width: 100%;
+            padding: 10px 14px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 15px;
+            font-family: inherit;
+            background: #fff;
+            transition: border-color 0.2s ease, box-shadow 0.2s ease;
+        }
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #8b4513;
+            box-shadow: 0 0 0 3px rgba(139, 69, 19, 0.1);
+        }
+        .form-group textarea {
+            resize: vertical;
+        }
+        .required {
+            color: #b33;
+        }
+
+        @media (max-width: 600px) {
+            .form-row {
+                flex-direction: column;
+                gap: 0;
+            }
+        }
+
+        /* Drop zone */
+        .drop-zone {
+            border: 2px dashed #c8b8a8;
+            border-radius: 10px;
+            padding: 44px 24px;
+            text-align: center;
+            cursor: pointer;
+            transition: border-color 0.2s, background 0.2s;
+            margin-bottom: 16px;
+            background: #faf9f7;
+        }
+        .drop-zone:hover, .drop-zone.drag-over {
+            border-color: #8b4513;
+            background: #faf7f4;
+        }
+        .drop-zone-icon {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            color: #8b4513;
+        }
+        .drop-zone h3 {
+            margin: 0 0 8px;
+            color: #1a1a1a;
+            font-size: 17px;
+        }
+        .drop-zone p {
+            margin: 0;
+            color: #666;
+            font-size: 14px;
+        }
+        .drop-zone .browse-link {
+            color: #8b4513;
+            font-weight: 600;
+            text-decoration: underline;
+        }
+
+        /* Thumbnail previews */
+        .preview-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        .preview-item {
+            position: relative;
+            border-radius: 8px;
+            overflow: hidden;
+            aspect-ratio: 1;
+            background: #f0f0f0;
+        }
+        .preview-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .preview-item .remove-btn {
+            position: absolute;
+            top: 4px;
+            right: 4px;
+            width: 24px;
+            height: 24px;
+            background: rgba(0,0,0,0.6);
+            color: #fff;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 14px;
+            line-height: 24px;
+            text-align: center;
+            padding: 0;
+        }
+        .preview-item .remove-btn:hover {
+            background: rgba(180,0,0,0.8);
+        }
+        .preview-item .file-name-label {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0,0,0,0.55);
+            color: #fff;
+            font-size: 11px;
+            padding: 3px 6px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .file-count {
+            text-align: center;
+            color: #555;
+            font-size: 14px;
+            margin-bottom: 16px;
+        }
+
+        /* Progress bar */
+        .upload-progress {
+            display: none;
+            margin: 20px 0;
+        }
+        .progress-bar-outer {
+            background: #e8e4df;
+            border-radius: 8px;
+            height: 16px;
+            overflow: hidden;
+            margin-bottom: 8px;
+        }
+        .progress-bar-inner {
+            background: linear-gradient(90deg, #8b4513, #27ae60);
+            height: 100%;
+            width: 0%;
+            transition: width 0.3s ease;
+            border-radius: 8px;
+        }
+        .progress-text {
+            text-align: center;
+            font-size: 14px;
+            color: #555;
+        }
+
+        /* Submit button */
+        .submit-photos-btn {
+            display: block;
+            width: 100%;
+            max-width: 360px;
+            margin: 24px auto 0;
+            padding: 14px 32px;
+            background: linear-gradient(135deg, #8b4513 0%, #a0522d 100%);
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s, transform 0.1s;
+            box-shadow: 0 2px 6px rgba(139, 69, 19, 0.25);
+        }
+        .submit-photos-btn:hover:not(:disabled) {
+            background: linear-gradient(135deg, #a0522d 0%, #b5693f 100%);
+            transform: translateY(-1px);
+        }
+        .submit-photos-btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        /* Success message */
+        .photo-success {
+            display: none;
+            text-align: center;
+            padding: 40px 20px;
+        }
+        .photo-success .success-icon {
+            font-size: 3rem;
+            color: #27ae60;
+            margin-bottom: 16px;
+        }
+        .photo-success h2 {
+            margin: 0 0 12px;
+            color: #1a1a1a;
+        }
+        .photo-success p {
+            color: #555;
+            max-width: 500px;
+            margin: 0 auto 8px;
+        }
+        .photo-success .return-link {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 32px;
+            background: linear-gradient(135deg, #8b4513 0%, #a0522d 100%);
+            color: #fff;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            box-shadow: 0 2px 6px rgba(139, 69, 19, 0.25);
+        }
+        .photo-success .return-link:hover {
+            background: linear-gradient(135deg, #a0522d 0%, #b5693f 100%);
+            text-decoration: none;
+            color: #fff;
+        }
+
+        /* Alt methods box */
+        .alt-methods {
+            background: #faf7f4;
+            border-radius: 8px;
+            border: 1px solid #e0d5ca;
+            padding: 20px 24px;
+            margin-top: 28px;
+        }
+        .alt-methods h3 {
+            margin: 0 0 8px;
+            font-size: 15px;
+            color: #1a1a1a;
+        }
+        .alt-methods p {
+            margin: 0;
+            color: #555;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        /* Error message */
+        .error-msg {
+            color: #c0392b;
+            background: #fdf0ef;
+            border: 1px solid #e6b0aa;
+            border-radius: 8px;
+            padding: 12px 16px;
+            margin-top: 12px;
+            display: none;
+            font-size: 14px;
+        }
+
+        #submit-status {
+            text-align: center;
+            margin-top: 12px;
+            color: #888;
+            font-size: 14px;
+        }
+
+        /* Keep upload area constrained */
+        .upload-container {
+            max-width: 680px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <a href="#main-content" class="skip-to-content">Skip to main content</a>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <div class="logo-container">
+                <div class="logo-icon">W</div>
+                <div class="logo-text">
+                    <span class="logo-title">Brian Ward Appraisal</span>
+                    <p class="logo-tagline">Home Appraiser for Date-of-Death, Divorce,<br>Estates, Trusts, Before You Buy or Sell, and More</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="top-nav" aria-label="Main Navigation">
+        <button class="mobile-nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">&#9776; Menu</button>
+        <div class="top-nav-inner">
+            <a href="index.html">Home</a>
+            <a href="appraisal-fees.html">Services &amp; Fees</a>
+            <a href="service-area.html">Service Area</a>
+            <a href="contact.html">Contact</a>
+            <a href="blog.html">Market Reports</a>
+            <a href="faq.html">FAQ</a>
+            <a href="reviews.html">Reviews</a>
+        </div>
+    </nav>
+
+    <!-- Hero Banner -->
+    <section class="hero-banner">
+        <img src="images/consultation.jpg" alt="Property photo submission" class="hero-image">
+        <div class="hero-overlay">
+            <h2 class="hero-headline">Upload Property Photos</h2>
+            <p class="hero-sub">Securely submit photos for your appraisal</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main id="main-content" class="page-wrapper">
+        <section class="main-content">
+            <div class="upload-container">
+
+                <p class="upload-intro">Use this form to submit photos of the property being appraised. The more photos you provide, the more thorough and accurate your appraisal will be. Photos are uploaded securely to our private storage and are only used for your appraisal.</p>
+
+                <!-- Photo form -->
+                <div id="photo-form">
+                    <fieldset class="form-section">
+                        <legend>Your Information</legend>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="ref-email">Email Address <span class="required">*</span></label>
+                                <input type="email" id="ref-email" name="ref_email" required placeholder="you@example.com" autocomplete="email">
+                            </div>
+                            <div class="form-group">
+                                <label for="ref-address">Property Address <span class="required">*</span></label>
+                                <input type="text" id="ref-address" name="ref_address" required placeholder="e.g. 123 Main St, San Diego">
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <!-- Photo instructions -->
+                    <div class="photo-instructions" id="photo-guide">
+                        <h3>What to Photograph</h3>
+                        <p style="margin-bottom: 14px; color: #444;">You don't need professional equipment &mdash; a smartphone works perfectly. Hold it in landscape orientation and make sure rooms are well-lit.</p>
+
+                        <h4>Exterior (Required)</h4>
+                        <ul>
+                            <li><strong>Front of home</strong> &mdash; Full front view from the curb showing the roofline, garage, and yard</li>
+                            <li><strong>Street scene</strong> &mdash; One photo looking left and one looking right from the curb</li>
+                            <li><strong>Rear of home</strong> &mdash; Full back view showing the roofline, patios, and any additions</li>
+                            <li><strong>Backyard &amp; outdoor features</strong> &mdash; Pool, spa, patio, detached structures, fencing</li>
+                            <li><strong>Side yards</strong> &mdash; If accessible, photograph each side of the house</li>
+                        </ul>
+
+                        <h4>Interior (Required)</h4>
+                        <ul>
+                            <li><strong>Kitchen</strong> &mdash; 2-3 photos showing countertops, cabinets, appliances, and flooring</li>
+                            <li><strong>All bathrooms</strong> &mdash; Show vanity, shower/tub, flooring, and fixtures</li>
+                            <li><strong>Living areas</strong> &mdash; One photo per room showing size, flooring, and overall condition</li>
+                            <li><strong>Bedrooms</strong> &mdash; At least the primary bedroom with flooring and windows visible</li>
+                            <li><strong>Laundry area</strong> &mdash; Especially indoor laundry rooms</li>
+                        </ul>
+
+                        <h4>Systems &amp; Upgrades (Helpful)</h4>
+                        <ul>
+                            <li><strong>Water heater &amp; HVAC</strong> &mdash; Show the data plate/label with the manufacture date</li>
+                            <li><strong>Electrical panel</strong> &mdash; Open the panel and photograph the breaker labels</li>
+                            <li><strong>Solar panels, new roof, remodeled rooms</strong> &mdash; Any recent upgrades</li>
+                            <li><strong>Condition issues</strong> &mdash; Deferred maintenance, damage, or anything notable</li>
+                        </ul>
+
+                        <p class="photo-tip">Aim for 20&ndash;30+ photos. More is always better &mdash; we'll use what we need. If you don't have access to the property, listing photos, Google Street View, or assessor photos work too. Just let us know in the notes.</p>
+                    </div>
+
+                    <!-- Upload area -->
+                    <div class="form-section" style="padding: 24px;">
+                        <div class="drop-zone" id="drop-zone">
+                            <div class="drop-zone-icon">&#128247;</div>
+                            <h3>Drag photos here</h3>
+                            <p>or <span class="browse-link">browse your device</span> to select photos</p>
+                            <p style="margin-top: 8px; font-size: 13px; color: #999;">JPEG, PNG, and HEIC accepted &middot; up to 25 MB each</p>
+                            <input type="file" id="file-input" multiple accept="image/jpeg,image/png,image/heic,image/heif,.jpg,.jpeg,.png,.heic,.heif" style="display: none;">
+                        </div>
+
+                        <div class="preview-grid" id="preview-grid"></div>
+                        <p class="file-count" id="file-count" style="display: none;"></p>
+
+                        <!-- Upload progress -->
+                        <div class="upload-progress" id="upload-progress">
+                            <div class="progress-bar-outer">
+                                <div class="progress-bar-inner" id="progress-bar"></div>
+                            </div>
+                            <p class="progress-text" id="progress-text">Uploading...</p>
+                        </div>
+                    </div>
+
+                    <!-- Notes -->
+                    <fieldset class="form-section">
+                        <legend>Additional Notes</legend>
+                        <div class="form-group full-width">
+                            <label for="photo-notes">Anything we should know about the photos or property?</label>
+                            <textarea id="photo-notes" name="photo_notes" rows="3" placeholder="e.g. Photos are from last month, kitchen was remodeled in 2022, roof replaced in 2019..."></textarea>
+                        </div>
+                    </fieldset>
+
+                    <button type="button" class="submit-photos-btn" id="submit-photos-btn" disabled>Submit Photos</button>
+                    <p id="submit-status">Select at least one photo to continue.</p>
+                    <div class="error-msg" id="error-msg"></div>
+                </div>
+
+                <!-- Success message -->
+                <div class="photo-success" id="photo-success">
+                    <div class="success-icon">&#10004;</div>
+                    <h2>Photos Received!</h2>
+                    <p>Your property photos have been securely uploaded. Our appraiser will review them along with your order details.</p>
+                    <p>If we need additional photos, we'll reach out to the email address you provided.</p>
+                    <a href="index.html" class="return-link">Return to Homepage</a>
+                </div>
+
+                <!-- Alternative methods -->
+                <div class="alt-methods" id="alt-methods">
+                    <h3>Other Ways to Submit Photos</h3>
+                    <p>You can also email photos to <strong><a href="mailto:contact@brianward.com">contact@brianward.com</a></strong> with the property address in the subject line, or text them to <strong><a href="tel:6196309273">(619) 630-9273</a></strong>. Sharing a Google Drive, Dropbox, or iCloud link works too.</p>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Brian Ward Appraisal</h4>
+                <p>15877 Paseo Del Sur<br>San Diego, CA 92127</p>
+                <p>Phone: <a href="tel:(888) 844-1733">(888) 844-1733</a><br>
+                Email: <a href="mailto:contact@brianward.com">contact@brianward.com</a></p>
+            </div>
+            <div class="footer-section">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="appraisal-fees.html">Services &amp; Fees</a></li>
+                    <li><a href="service-area.html">Service Area</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="terms-of-use.html">Terms</a></li>
+                    <li><a href="privacy-policy.html">Privacy</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Brian Ward Appraisal. All rights reserved. Certified Appraiser | San Diego County, CA</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+    (function() {
+        var selectedFiles = [];
+        var dropZone = document.getElementById('drop-zone');
+        var fileInput = document.getElementById('file-input');
+        var previewGrid = document.getElementById('preview-grid');
+        var fileCount = document.getElementById('file-count');
+        var submitBtn = document.getElementById('submit-photos-btn');
+        var submitStatus = document.getElementById('submit-status');
+        var progressEl = document.getElementById('upload-progress');
+        var progressBar = document.getElementById('progress-bar');
+        var progressText = document.getElementById('progress-text');
+        var errorMsg = document.getElementById('error-msg');
+
+        var MAX_FILE_SIZE = 25 * 1024 * 1024; // 25 MB
+
+        // --- Drop zone events ---
+        dropZone.addEventListener('click', function() {
+            fileInput.click();
+        });
+
+        dropZone.addEventListener('dragover', function(e) {
+            e.preventDefault();
+            dropZone.classList.add('drag-over');
+        });
+
+        dropZone.addEventListener('dragleave', function() {
+            dropZone.classList.remove('drag-over');
+        });
+
+        dropZone.addEventListener('drop', function(e) {
+            e.preventDefault();
+            dropZone.classList.remove('drag-over');
+            addFiles(e.dataTransfer.files);
+        });
+
+        fileInput.addEventListener('change', function() {
+            addFiles(fileInput.files);
+            fileInput.value = '';
+        });
+
+        function addFiles(fileList) {
+            var skipped = [];
+            for (var i = 0; i < fileList.length; i++) {
+                var f = fileList[i];
+                if (!f.type.match(/^image\//)) {
+                    skipped.push(f.name + ' (not an image)');
+                    continue;
+                }
+                if (f.size > MAX_FILE_SIZE) {
+                    skipped.push(f.name + ' (over 25 MB)');
+                    continue;
+                }
+                var isDupe = selectedFiles.some(function(existing) {
+                    return existing.name === f.name && existing.size === f.size;
+                });
+                if (!isDupe) {
+                    selectedFiles.push(f);
+                }
+            }
+            if (skipped.length > 0) {
+                showError('Skipped: ' + skipped.join(', '));
+            }
+            renderPreviews();
+        }
+
+        function removeFile(index) {
+            selectedFiles.splice(index, 1);
+            renderPreviews();
+        }
+
+        function renderPreviews() {
+            previewGrid.innerHTML = '';
+            selectedFiles.forEach(function(f, idx) {
+                var item = document.createElement('div');
+                item.className = 'preview-item';
+
+                var img = document.createElement('img');
+                img.src = URL.createObjectURL(f);
+                img.alt = f.name;
+                item.appendChild(img);
+
+                var removeBtn = document.createElement('button');
+                removeBtn.className = 'remove-btn';
+                removeBtn.innerHTML = '&times;';
+                removeBtn.title = 'Remove';
+                removeBtn.setAttribute('data-idx', idx);
+                removeBtn.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    removeFile(parseInt(this.getAttribute('data-idx')));
+                });
+                item.appendChild(removeBtn);
+
+                var label = document.createElement('div');
+                label.className = 'file-name-label';
+                label.textContent = f.name;
+                item.appendChild(label);
+
+                previewGrid.appendChild(item);
+            });
+
+            if (selectedFiles.length > 0) {
+                fileCount.style.display = 'block';
+                var totalMB = selectedFiles.reduce(function(sum, f) { return sum + f.size; }, 0) / 1024 / 1024;
+                fileCount.textContent = selectedFiles.length + ' photo' + (selectedFiles.length > 1 ? 's' : '') + ' selected (' + totalMB.toFixed(1) + ' MB)';
+                submitBtn.disabled = false;
+                submitStatus.textContent = 'Ready to upload.';
+                submitStatus.style.color = '#27ae60';
+            } else {
+                fileCount.style.display = 'none';
+                submitBtn.disabled = true;
+                submitStatus.textContent = 'Select at least one photo to continue.';
+                submitStatus.style.color = '#888';
+            }
+            hideError();
+        }
+
+        function showError(msg) {
+            errorMsg.textContent = msg;
+            errorMsg.style.display = 'block';
+        }
+        function hideError() {
+            errorMsg.style.display = 'none';
+        }
+
+        // --- Submit handler ---
+        submitBtn.addEventListener('click', async function() {
+            var email = document.getElementById('ref-email');
+            var address = document.getElementById('ref-address');
+
+            if (!email.value) { email.reportValidity(); return; }
+            if (!address.value) { address.reportValidity(); return; }
+            if (selectedFiles.length === 0) { showError('Please select at least one photo.'); return; }
+
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Uploading\u2026';
+            hideError();
+            progressEl.style.display = 'block';
+            progressBar.style.width = '0%';
+
+            var folderId = '';
+            var totalFiles = selectedFiles.length;
+            var uploaded = 0;
+            var failed = [];
+
+            for (var i = 0; i < totalFiles; i++) {
+                var file = selectedFiles[i];
+                var isLast = (i === totalFiles - 1);
+
+                progressText.textContent = 'Uploading ' + (i + 1) + ' of ' + totalFiles + ': ' + file.name;
+                progressBar.style.width = Math.round(((i) / totalFiles) * 100) + '%';
+
+                var formData = new FormData();
+                formData.append('file', file);
+                formData.append('email', email.value);
+                formData.append('property_address', address.value);
+                if (folderId) formData.append('folder_id', folderId);
+                if (isLast) {
+                    formData.append('is_last', 'true');
+                    formData.append('notes', document.getElementById('photo-notes').value);
+                    formData.append('total_count', String(totalFiles));
+                }
+
+                try {
+                    var resp = await fetch('/api/upload-photos', {
+                        method: 'POST',
+                        body: formData,
+                    });
+                    var result = await resp.json();
+
+                    if (!resp.ok || result.error) {
+                        failed.push(file.name + ': ' + (result.error || 'Upload failed'));
+                        continue;
+                    }
+
+                    if (result.folderId) folderId = result.folderId;
+                    uploaded++;
+                } catch (err) {
+                    failed.push(file.name + ': ' + (err.message || 'Network error'));
+                }
+
+                progressBar.style.width = Math.round(((i + 1) / totalFiles) * 100) + '%';
+            }
+
+            if (uploaded === totalFiles) {
+                progressText.textContent = 'All photos uploaded!';
+                progressBar.style.width = '100%';
+
+                setTimeout(function() {
+                    document.getElementById('photo-form').style.display = 'none';
+                    document.getElementById('alt-methods').style.display = 'none';
+                    document.getElementById('photo-success').style.display = 'block';
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                }, 800);
+            } else if (uploaded > 0) {
+                progressText.textContent = uploaded + ' of ' + totalFiles + ' photos uploaded.';
+                showError('Some photos failed to upload: ' + failed.join('; ') + '\n\nThe rest were uploaded successfully. You can email the remaining photos to contact@brianward.com.');
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'Retry Failed Photos';
+            } else {
+                progressText.textContent = 'Upload failed.';
+                showError('Unable to upload photos. Please try again, or email them to contact@brianward.com.\n\n' + failed[0]);
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'Submit Photos';
+                progressEl.style.display = 'none';
+            }
+        });
+    })();
+    </script>
+</body>
+</html>
