@@ -990,12 +990,18 @@ table tr:hover td {
     .header {
         margin-top: 0;
         border-radius: 0;
+        background: #3b2314;
     }
 
     .header-inner,
     .header-content {
         flex-wrap: wrap;
         padding: 16px 20px;
+    }
+
+    .header-logo,
+    .logo-container {
+        color: #fff;
     }
 
     .header-image {
@@ -1006,11 +1012,18 @@ table tr:hover td {
     .logo-text h1,
     .logo-title {
         font-size: 20px;
+        color: #fff;
     }
 
     .header-tagline,
     .logo-tagline {
         font-size: 13px;
+        color: rgba(255, 255, 255, 0.85);
+    }
+
+    .logo-icon {
+        background: rgba(255, 255, 255, 0.15);
+        box-shadow: none;
     }
 
     /* Collapsible mobile nav */
@@ -1165,11 +1178,13 @@ table tr:hover td {
     .logo-text h1,
     .logo-title {
         font-size: 18px;
+        color: #fff;
     }
 
     .header-tagline,
     .logo-tagline {
         font-size: 12px;
+        color: rgba(255, 255, 255, 0.85);
     }
 
     .main-content {
