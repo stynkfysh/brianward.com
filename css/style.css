@@ -983,6 +983,82 @@ table tr:hover td {
     left: 0;
 }
 
+/* Service area grid */
+.area-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 6px 24px;
+    list-style: none;
+    padding: 0;
+    margin: 12px 0 24px;
+}
+
+.area-grid li {
+    margin: 0;
+    padding: 0;
+}
+
+.area-grid a {
+    display: block;
+    padding: 8px 12px;
+    border-radius: 6px;
+    color: #2d2d2d;
+    text-decoration: none;
+    font-size: 15px;
+    transition: background 0.15s ease, color 0.15s ease;
+}
+
+.area-grid a:hover {
+    background: #f0f4f8;
+    color: #c07d3e;
+    text-decoration: none;
+}
+
+.area-county-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 32px 0 8px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #e2e4e8;
+}
+
+.area-county-header h2 {
+    margin: 0;
+    font-size: 20px;
+}
+
+.area-county-count {
+    background: #1e2d3d;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 3px 10px;
+    border-radius: 12px;
+    letter-spacing: 0.3px;
+}
+
+.area-statewide {
+    background: #f0f4f8;
+    border: 1px solid #d8dfe6;
+    border-left: 4px solid #1e2d3d;
+    border-radius: 8px;
+    padding: 20px 24px;
+    margin: 28px 0;
+}
+
+.area-statewide h3 {
+    margin: 0 0 6px;
+    font-size: 16px;
+    color: #1e2d3d;
+}
+
+.area-statewide p {
+    margin: 0;
+    color: #444;
+    font-size: 15px;
+}
+
 /* Coupon/special box */
 .special-offer {
     background: #fef9f0;
@@ -1168,6 +1244,11 @@ table tr:hover td {
     .cta-banner-content {
         padding: 24px 20px;
     }
+
+    .area-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 4px 16px;
+    }
 }
 
 /* ============================================
@@ -1282,6 +1363,20 @@ table tr:hover td {
 
     .cta-banner {
         margin: 20px -16px 0;
+    }
+
+    .area-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 2px 12px;
+    }
+
+    .area-grid a {
+        padding: 7px 8px;
+        font-size: 14px;
+    }
+
+    .area-statewide {
+        padding: 16px 18px;
     }
 }
 
