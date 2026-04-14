@@ -490,6 +490,10 @@ p {
     min-height: 220px;
 }
 
+.cta-banner-no-image .cta-banner-content {
+    padding: 44px 40px;
+}
+
 .cta-banner-content {
     flex: 1;
     padding: 36px 40px;
