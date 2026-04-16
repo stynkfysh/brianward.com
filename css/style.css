@@ -1054,6 +1054,15 @@ table tr:hover td {
     margin: 0;
 }
 
+.pricing-tier-label {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    color: #2b6cb0;
+    margin-bottom: 8px !important;
+}
+
 .pricing-card > p {
     font-size: 13.5px;
     line-height: 1.55;
@@ -1153,7 +1162,7 @@ table tr:hover td {
 
 .guide-comparison {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
     gap: 24px;
     margin: 24px 0;
 }
