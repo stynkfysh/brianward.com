@@ -98,6 +98,20 @@
 /Palm-Springs/Appraiser/Palm-Springs.html /service-area.html 301
 /Rancho-Mirage/Appraiser/Rancho-Mirage.html /service-area.html 301
 
+# Common alternate URL patterns and misspellings
+/index.html  /  301
+/fees.html  /appraisal-fees.html  301
+/pricing.html  /appraisal-fees.html  301
+/services.html  /appraisal-fees.html  301
+/about.html  /  301
+/areas.html  /service-area.html  301
+/testimonials.html  /reviews.html  301
+/blog-1.html  /blog.html  301
+
+# Old .htm extensions
+/index.htm  /  301
+/contact.htm  /contact.html  301
+
 # City-specific bankruptcy and date-of-death query string pages
 # Cloudflare Pages _redirects don't support query strings,
 # but the base paths are covered above

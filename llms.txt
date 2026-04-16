@@ -34,7 +34,8 @@
 - [Contact](https://www.brianward.com/contact.html)
 - [FAQ](https://www.brianward.com/faq.html)
 - [Reviews](https://www.brianward.com/reviews.html)
-- [Blog](https://www.brianward.com/blog.html)
+- [Market Reports Blog](https://www.brianward.com/blog.html)
+- [Upload Photos](https://www.brianward.com/upload-photos.html): Client portal for uploading property photos
 
 ## Related Site
 
