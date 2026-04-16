@@ -312,8 +312,17 @@ p {
 }
 
 .hero-banner .cta-button {
-    font-size: 16px;
-    padding: 14px 40px;
+    font-size: 15px;
+    padding: 14px 36px;
+    background: #1b2d3d;
+    border: 2px solid rgba(255,255,255,0.3);
+    border-radius: 30px;
+    letter-spacing: 0.3px;
+}
+
+.hero-banner .cta-button:hover {
+    background: #243a4d;
+    border-color: rgba(255,255,255,0.5);
 }
 
 /* ============================================
@@ -341,12 +350,11 @@ p {
     display: flex;
     justify-content: center;
     align-items: stretch;
-    background: #1b2d3d;
-    color: #ffffff;
-    padding: 40px;
+    background: #ffffff;
+    color: #1a1a1a;
+    padding: 48px 40px;
     margin: 0 -40px 60px -40px;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid #e2e4e8;
     gap: 0;
 }
 
@@ -354,7 +362,7 @@ p {
     flex: 1;
     text-align: center;
     padding: 0 30px;
-    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    border-right: 1px solid #e2e4e8;
 }
 
 .stat-item:last-child {
@@ -363,24 +371,25 @@ p {
 
 .stat-number {
     display: block;
-    font-size: 36px;
+    font-size: 42px;
     font-weight: 700;
     line-height: 1.1;
-    color: #d4944a;
-    letter-spacing: -0.75px;
+    color: #1b2d3d;
+    letter-spacing: -1px;
     margin-bottom: 8px;
 }
 
 .stat-label {
     display: block;
-    font-size: 13px;
-    font-weight: 500;
-    letter-spacing: 0.5px;
-    color: rgba(255, 255, 255, 0.8);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #888888;
 }
 
 /* ============================================
-   SERVICES SECTION (2x2 Grid)
+   SERVICES SECTION (4-column Grid)
    ============================================ */
 .services-section {
     margin: 60px 0;
@@ -389,11 +398,13 @@ p {
 .services-section h2 {
     text-align: center;
     margin-bottom: 40px;
+    font-size: 28px;
+    letter-spacing: -0.5px;
 }
 
 .services-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(4, 1fr);
     gap: 24px;
 }
 
@@ -404,40 +415,55 @@ p {
     text-align: center;
     background: #ffffff;
     border: 1px solid #e2e4e8;
-    border-radius: 8px;
-    padding: 40px 28px;
+    border-radius: 12px;
+    padding: 36px 20px 28px;
     transition: box-shadow 0.2s ease, transform 0.2s ease;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
 }
 
 .service-card:hover {
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
     transform: translateY(-2px);
 }
 
 .service-card-icon {
-    font-size: 40px;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
     line-height: 1;
-    color: #2b6cb0;
-    margin-bottom: 16px;
-    display: block;
+    color: #ffffff;
+    background: #1b2d3d;
+    border-radius: 50%;
+    margin-bottom: 18px;
+    flex-shrink: 0;
 }
 
-.service-card-body h2 {
-    font-size: 18px;
-    margin: 0 0 12px;
+.service-card-body h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin: 0 0 10px;
     color: #1a1a1a;
 }
 
 .service-card-body p {
-    margin: 0;
-    font-size: 14px;
-    line-height: 1.65;
+    margin: 0 0 14px;
+    font-size: 13px;
+    line-height: 1.6;
     color: #555555;
 }
 
-.service-card-body a {
+.service-card-body a.learn-more {
     color: #2b6cb0;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.service-card-body a.learn-more:hover {
+    text-decoration: underline;
 }
 
 /* ============================================
@@ -1003,7 +1029,7 @@ table tr:hover td {
     .stat-item {
         padding: 0;
         border-right: none;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        border-bottom: 1px solid #e2e4e8;
     }
 
     .stat-item:last-child {
@@ -1019,12 +1045,18 @@ table tr:hover td {
     }
 
     .services-grid {
-        grid-template-columns: 1fr;
-        gap: 20px;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
     }
 
     .service-card {
-        padding: 30px 24px;
+        padding: 24px 16px;
+    }
+
+    .service-card-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 24px;
     }
 
     .why-grid {
@@ -1142,6 +1174,11 @@ table tr:hover td {
         font-size: 11px;
     }
 
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
     .services-section h2 {
         margin-bottom: 24px;
     }
@@ -1150,7 +1187,7 @@ table tr:hover td {
         padding: 24px 16px;
     }
 
-    .service-card-body h2 {
+    .service-card-body h3 {
         font-size: 16px;
         margin-bottom: 8px;
     }
