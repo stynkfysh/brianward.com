@@ -44,6 +44,9 @@ Every report is completed by a certified appraiser with 7,000+ appraisals over 2
 - Insurance Dispute Appraisal: Valuations for insurance claim disputes
 - PMI Removal: Appraisals to remove private mortgage insurance
 - Bonds Appraisal: Valuations for bond and surety purposes
+- Proposition 19 Transfer Appraisal: Valuations for inherited property transfers under California Prop 19 to determine tax reassessment exposure
+- Expert Witness & Litigation Support: Qualified expert testimony, appraisal review, and litigation-ready reports for contested property matters
+- Appraisal Review: USPAP Standard 3 appraisal reviews providing professional critique of existing appraisals for divorce, probate, and contested matters
 
 ## Appraisal Services and Pricing
 
@@ -189,7 +192,7 @@ A Zestimate is a computer-generated estimate based on algorithms and public data
 
 Yes, and it's not unusual. Different appraisers may select different comparable sales, weigh market factors differently, or interpret a property's condition and quality with slightly different judgment. Two competent appraisals of the same property should land in a similar range. If they're far apart, it usually signals that one appraiser had better data or more local market knowledge.
 
-### Our Services
+### Services
 
 #### What types of appraisals do you offer?
 
@@ -235,7 +238,27 @@ When buying from or selling to a family member, the IRS expects the transaction 
 
 #### Can you help with property tax appeals?
 
-Yes. If the county-assessed value appears too high, an independent appraisal can support an appeal to the Assessment Appeals Board. The company also prepares appraisals for gift tax purposes, stepped-up basis calculations for inherited property, and other tax-related needs.
+Yes. If the county-assessed value appears too high, an independent appraisal can support an appeal to the Assessment Appeals Board. Brian Ward Appraisal also prepares appraisals for gift tax purposes, stepped-up basis calculations for inherited property, and other tax-related needs.
+
+#### How do you handle unpermitted additions or illegal conversions?
+
+Unpermitted additions are extremely common in San Diego — garage conversions, enclosed patios, added rooms, and unpermitted ADUs. The space is documented as it exists and the market reaction is analyzed. Some buyers pay a premium for the extra square footage regardless of permit status; others discount it. The appraiser's job is to measure that market reaction, not to enforce building codes. An appraiser is not a code enforcement officer and does not report unpermitted work to the city or county.
+
+#### How does an appraiser value a property with an ADU?
+
+Properties with Accessory Dwelling Units require special attention. A fully permitted ADU can add significant value — in San Diego, properties with ADUs often sell faster and at a premium. Brian Ward Appraisal distinguishes between permitted ADUs, unpermitted conversions, and Junior ADUs (JADUs), because the market reacts to each differently.
+
+#### What is the difference between an appraisal and the county assessor's value?
+
+The county assessor's value is used to calculate the property tax bill. In California, it's based on Proposition 13 rules — the assessed value is tied to the purchase price and increases by no more than 2% per year, regardless of actual market changes. An appraisal measures current fair market value based on recent comparable sales and actual market conditions. These two numbers can diverge dramatically, especially for homes owned for many years.
+
+#### Do I need an appraisal for a Prop 19 parent-to-child property transfer?
+
+In most cases, yes. California Proposition 19 eliminated the broad property tax protections that previously allowed parents to transfer homes to children without reassessment. Under Prop 19, the transfer is only partially protected if the child makes the property their primary residence within one year, and even then the protection is capped at the original assessed value plus $1 million. An accurate appraisal establishes the current fair market value, which directly determines how much of the property will be reassessed.
+
+#### Can I get a second opinion if I think an appraisal is wrong?
+
+Yes. A qualified appraiser can perform a formal appraisal review — a distinct USPAP assignment type (Standard 3) that evaluates the methodology, data selection, adjustment logic, and compliance of the original report. It's not just a second appraisal — it's a professional critique of the first one. This is common in divorce, probate disputes, and contested property matters.
 
 ### Costs, Timing & Process
 
@@ -295,6 +318,14 @@ Riverside, Moreno Valley, Corona, Temecula, Murrieta, Menifee, Lake Elsinore, He
 
 Brian Ward serves as a qualified expert witness in litigation, divorce, and bankruptcy matters. With 22 years of appraisal experience and over 7,000 completed assignments, Brian has provided expert testimony and litigation support for both lenders and borrowers. Whether the matter involves a disputed property value, a contested appraisal, or a complex valuation question, the company provides credible, well-documented opinions that hold up under cross-examination.
 
+## Proposition 19 Transfer Appraisals
+
+California Proposition 19 (effective February 16, 2021) eliminated the broad property tax protections previously available under Propositions 58 and 193. Under Prop 19, a parent-to-child or grandparent-to-grandchild transfer of a primary residence is only partially protected from reassessment if the child makes the property their primary residence within one year. Even then, the protection is capped: the new assessed value equals the original base year value plus the lesser of the current fair market value minus the base year value, or $1 million (adjusted for inflation starting 2023). An accurate appraisal of the property's current fair market value is essential to determine the reassessment exposure. Brian Ward Appraisal provides these valuations for families, estate attorneys, CPAs, and trustees navigating intergenerational property transfers across California.
+
+## Appraisal Review Service
+
+Brian Ward Appraisal performs formal appraisal reviews under USPAP Standard 3. An appraisal review is a distinct assignment type — not simply a second appraisal — that evaluates the methodology, data selection, adjustment logic, and USPAP compliance of an existing appraisal report. Review types include desk reviews (analysis of the report alone) and field reviews (includes an independent inspection of the property). Appraisal reviews are commonly ordered in divorce proceedings, probate disputes, contested property matters, and any situation where the credibility of an existing appraisal is in question. The review produces a written opinion on whether the original appraiser's conclusions are adequately supported and identifies specific deficiencies when they exist.
+
 ## Key Pages
 
 - Home: https://www.brianward.com/index.html
@@ -304,6 +335,9 @@ Brian Ward serves as a qualified expert witness in litigation, divorce, and bank
 - FAQ: https://www.brianward.com/faq.html
 - Reviews: https://www.brianward.com/reviews.html
 - Blog/Market Reports: https://www.brianward.com/blog.html
+- Proposition 19 Appraisal: https://www.brianward.com/prop-19-appraisal.html
+- Expert Witness & Litigation: https://www.brianward.com/expert-witness.html
+- Appraisal Review: https://www.brianward.com/appraisal-review.html
 
 ## Related Site
 
