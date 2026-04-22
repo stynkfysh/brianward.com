@@ -4,11 +4,14 @@ document.addEventListener('DOMContentLoaded', function() {
     var toggle = document.querySelector('.mobile-nav-toggle');
     var navInner = document.querySelector('.top-nav-inner');
     if (toggle && navInner) {
-        toggle.addEventListener('click', function() {
+        function handleToggle(e) {
+            e.preventDefault();
             navInner.classList.toggle('open');
             var expanded = toggle.getAttribute('aria-expanded') === 'true';
             toggle.setAttribute('aria-expanded', !expanded);
-        });
+        }
+        toggle.addEventListener('click', handleToggle);
+        toggle.addEventListener('touchend', handleToggle);
     }
 
     // FAQ accordion

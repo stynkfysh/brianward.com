@@ -1,15 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
   <!-- Main Pages -->
-  <url>
-    <loc>https://www.brianward.com/index.html</loc>
-    <lastmod>2026-04-16</lastmod>
-    <priority>1.0</priority>
-  </url>
   <url>
     <loc>https://www.brianward.com/appraisal-fees.html</loc>
     <lastmod>2026-04-16</lastmod>
     <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.brianward.com/bankruptcy-appraisal.html</loc>
+    <lastmod>2026-04-16</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.brianward.com/blog-2.html</loc>
+    <lastmod>2026-04-16</lastmod>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.brianward.com/blog-3.html</loc>
+    <lastmod>2026-04-16</lastmod>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.brianward.com/blog-4.html</loc>
+    <lastmod>2026-04-16</lastmod>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.brianward.com/blog-5.html</loc>
+    <lastmod>2026-04-16</lastmod>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.brianward.com/blog-6.html</loc>
+    <lastmod>2026-04-16</lastmod>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.brianward.com/blog.html</loc>
+    <lastmod>2026-04-16</lastmod>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.brianward.com/bonds-appraisal.html</loc>
+    <lastmod>2026-04-16</lastmod>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.brianward.com/contact.html</loc>
@@ -17,106 +53,84 @@
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.brianward.com/service-area.html</loc>
-    <lastmod>2026-04-16</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.brianward.com/faq.html</loc>
-    <lastmod>2026-04-16</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.brianward.com/reviews.html</loc>
-    <lastmod>2026-04-16</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.brianward.com/blog.html</loc>
-    <lastmod>2026-04-16</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.brianward.com/blog-2.html</loc>
-    <lastmod>2026-04-16</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.brianward.com/blog-3.html</loc>
-    <lastmod>2026-04-16</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.brianward.com/blog-4.html</loc>
-    <lastmod>2026-04-16</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.brianward.com/blog-5.html</loc>
-    <lastmod>2026-04-16</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.brianward.com/blog-6.html</loc>
-    <lastmod>2026-04-16</lastmod>
-    <priority>0.6</priority>
-  </url>
-
-  <!-- Appraisal Type Pages -->
-  <url>
-    <loc>https://www.brianward.com/bankruptcy-appraisal.html</loc>
-    <lastmod>2026-04-16</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.brianward.com/bonds-appraisal.html</loc>
-    <lastmod>2026-04-16</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://www.brianward.com/date-of-death-appraisal.html</loc>
     <lastmod>2026-04-16</lastmod>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.brianward.com/divorce-appraisal.html</loc>
     <lastmod>2026-04-16</lastmod>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.brianward.com/estate-appraisal.html</loc>
     <lastmod>2026-04-16</lastmod>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.brianward.com/family-transaction-appraisal.html</loc>
     <lastmod>2026-04-16</lastmod>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.brianward.com/faq.html</loc>
+    <lastmod>2026-04-16</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.brianward.com/index.html</loc>
+    <lastmod>2026-04-16</lastmod>
+    <priority>1.0</priority>
   </url>
   <url>
     <loc>https://www.brianward.com/insurance-appraisal.html</loc>
     <lastmod>2026-04-16</lastmod>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.brianward.com/pmi-removal.html</loc>
     <lastmod>2026-04-16</lastmod>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.brianward.com/pre-purchase-appraisal.html</loc>
     <lastmod>2026-04-16</lastmod>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.brianward.com/pre-sale-appraisal.html</loc>
+    <lastmod>2026-04-16</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.brianward.com/privacy-policy.html</loc>
+    <lastmod>2026-04-16</lastmod>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://www.brianward.com/reviews.html</loc>
+    <lastmod>2026-04-16</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.brianward.com/service-area.html</loc>
     <lastmod>2026-04-16</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.brianward.com/tax-appraisal.html</loc>
     <lastmod>2026-04-16</lastmod>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.brianward.com/terms-of-use.html</loc>
+    <lastmod>2026-04-16</lastmod>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://www.brianward.com/upload-photos.html</loc>
+    <lastmod>2026-04-16</lastmod>
+    <priority>0.6</priority>
   </url>
 
   <!-- Area Pages -->
@@ -127,6 +141,16 @@
   </url>
   <url>
     <loc>https://www.brianward.com/areas/alpine.html</loc>
+    <lastmod>2026-04-16</lastmod>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.brianward.com/areas/anaheim.html</loc>
+    <lastmod>2026-04-16</lastmod>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.brianward.com/areas/antioch.html</loc>
     <lastmod>2026-04-16</lastmod>
     <priority>0.5</priority>
   </url>
@@ -146,7 +170,17 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://www.brianward.com/areas/berkeley.html</loc>
+    <lastmod>2026-04-16</lastmod>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://www.brianward.com/areas/bonita.html</loc>
+    <lastmod>2026-04-16</lastmod>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.brianward.com/areas/burbank.html</loc>
     <lastmod>2026-04-16</lastmod>
     <priority>0.5</priority>
   </url>
@@ -171,7 +205,42 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://www.brianward.com/areas/carmel-valley.html</loc>
+    <lastmod>2026-04-16</lastmod>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.brianward.com/areas/cathedral-city.html</loc>
+    <lastmod>2026-04-16</lastmod>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.brianward.com/areas/chino-hills.html</loc>
+    <lastmod>2026-04-16</lastmod>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.brianward.com/areas/chino.html</loc>
+    <lastmod>2026-04-16</lastmod>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://www.brianward.com/areas/chula-vista.html</loc>
+    <lastmod>2026-04-16</lastmod>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.brianward.com/areas/clairemont.html</loc>
+    <lastmod>2026-04-16</lastmod>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.brianward.com/areas/coachella.html</loc>
+    <lastmod>2026-04-16</lastmod>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.brianward.com/areas/concord.html</loc>
     <lastmod>2026-04-16</lastmod>
     <priority>0.5</priority>
   </url>
@@ -182,6 +251,11 @@
   </url>
   <url>
     <loc>https://www.brianward.com/areas/coronado.html</loc>
+    <lastmod>2026-04-16</lastmod>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.brianward.com/areas/costa-mesa.html</loc>
     <lastmod>2026-04-16</lastmod>
     <priority>0.5</priority>
   </url>
@@ -201,12 +275,27 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://www.brianward.com/areas/desert-hot-springs.html</loc>
+    <lastmod>2026-04-16</lastmod>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.brianward.com/areas/downey.html</loc>
+    <lastmod>2026-04-16</lastmod>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://www.brianward.com/areas/eastvale.html</loc>
     <lastmod>2026-04-16</lastmod>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.brianward.com/areas/el-cajon.html</loc>
+    <lastmod>2026-04-16</lastmod>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.brianward.com/areas/elk-grove.html</loc>
     <lastmod>2026-04-16</lastmod>
     <priority>0.5</priority>
   </url>
@@ -221,7 +310,22 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://www.brianward.com/areas/fairfield.html</loc>
+    <lastmod>2026-04-16</lastmod>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://www.brianward.com/areas/fallbrook.html</loc>
+    <lastmod>2026-04-16</lastmod>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.brianward.com/areas/fontana.html</loc>
+    <lastmod>2026-04-16</lastmod>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.brianward.com/areas/fremont.html</loc>
     <lastmod>2026-04-16</lastmod>
     <priority>0.5</priority>
   </url>
@@ -231,12 +335,67 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://www.brianward.com/areas/fullerton.html</loc>
+    <lastmod>2026-04-16</lastmod>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.brianward.com/areas/garden-grove.html</loc>
+    <lastmod>2026-04-16</lastmod>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.brianward.com/areas/glendale.html</loc>
+    <lastmod>2026-04-16</lastmod>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.brianward.com/areas/hayward.html</loc>
+    <lastmod>2026-04-16</lastmod>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://www.brianward.com/areas/hemet.html</loc>
     <lastmod>2026-04-16</lastmod>
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://www.brianward.com/areas/hesperia.html</loc>
+    <lastmod>2026-04-16</lastmod>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.brianward.com/areas/hillcrest.html</loc>
+    <lastmod>2026-04-16</lastmod>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.brianward.com/areas/hollywood.html</loc>
+    <lastmod>2026-04-16</lastmod>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.brianward.com/areas/huntington-beach.html</loc>
+    <lastmod>2026-04-16</lastmod>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://www.brianward.com/areas/imperial-beach.html</loc>
+    <lastmod>2026-04-16</lastmod>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.brianward.com/areas/indian-wells.html</loc>
+    <lastmod>2026-04-16</lastmod>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.brianward.com/areas/indio.html</loc>
+    <lastmod>2026-04-16</lastmod>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.brianward.com/areas/inglewood.html</loc>
     <lastmod>2026-04-16</lastmod>
     <priority>0.5</priority>
   </url>
@@ -261,6 +420,11 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://www.brianward.com/areas/la-quinta.html</loc>
+    <lastmod>2026-04-16</lastmod>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://www.brianward.com/areas/lake-elsinore.html</loc>
     <lastmod>2026-04-16</lastmod>
     <priority>0.5</priority>
@@ -271,7 +435,22 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://www.brianward.com/areas/lancaster.html</loc>
+    <lastmod>2026-04-16</lastmod>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://www.brianward.com/areas/lemon-grove.html</loc>
+    <lastmod>2026-04-16</lastmod>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.brianward.com/areas/long-beach.html</loc>
+    <lastmod>2026-04-16</lastmod>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.brianward.com/areas/los-angeles.html</loc>
     <lastmod>2026-04-16</lastmod>
     <priority>0.5</priority>
   </url>
@@ -281,7 +460,22 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://www.brianward.com/areas/mira-mesa.html</loc>
+    <lastmod>2026-04-16</lastmod>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.brianward.com/areas/modesto.html</loc>
+    <lastmod>2026-04-16</lastmod>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://www.brianward.com/areas/moreno-valley.html</loc>
+    <lastmod>2026-04-16</lastmod>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.brianward.com/areas/mountain-view.html</loc>
     <lastmod>2026-04-16</lastmod>
     <priority>0.5</priority>
   </url>
@@ -296,7 +490,17 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://www.brianward.com/areas/newport-beach.html</loc>
+    <lastmod>2026-04-16</lastmod>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://www.brianward.com/areas/norco.html</loc>
+    <lastmod>2026-04-16</lastmod>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.brianward.com/areas/north-park.html</loc>
     <lastmod>2026-04-16</lastmod>
     <priority>0.5</priority>
   </url>
@@ -306,7 +510,52 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://www.brianward.com/areas/ontario.html</loc>
+    <lastmod>2026-04-16</lastmod>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.brianward.com/areas/orange.html</loc>
+    <lastmod>2026-04-16</lastmod>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.brianward.com/areas/oxnard.html</loc>
+    <lastmod>2026-04-16</lastmod>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.brianward.com/areas/pacific-beach.html</loc>
+    <lastmod>2026-04-16</lastmod>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.brianward.com/areas/palm-desert.html</loc>
+    <lastmod>2026-04-16</lastmod>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.brianward.com/areas/palm-springs.html</loc>
+    <lastmod>2026-04-16</lastmod>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.brianward.com/areas/palmdale.html</loc>
+    <lastmod>2026-04-16</lastmod>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.brianward.com/areas/pasadena.html</loc>
+    <lastmod>2026-04-16</lastmod>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://www.brianward.com/areas/perris.html</loc>
+    <lastmod>2026-04-16</lastmod>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.brianward.com/areas/pomona.html</loc>
     <lastmod>2026-04-16</lastmod>
     <priority>0.5</priority>
   </url>
@@ -326,7 +575,37 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://www.brianward.com/areas/rancho-bernardo.html</loc>
+    <lastmod>2026-04-16</lastmod>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.brianward.com/areas/rancho-cucamonga.html</loc>
+    <lastmod>2026-04-16</lastmod>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.brianward.com/areas/rancho-mirage.html</loc>
+    <lastmod>2026-04-16</lastmod>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://www.brianward.com/areas/rancho-santa-fe.html</loc>
+    <lastmod>2026-04-16</lastmod>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.brianward.com/areas/redlands.html</loc>
+    <lastmod>2026-04-16</lastmod>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.brianward.com/areas/rialto.html</loc>
+    <lastmod>2026-04-16</lastmod>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.brianward.com/areas/richmond.html</loc>
     <lastmod>2026-04-16</lastmod>
     <priority>0.5</priority>
   </url>
@@ -336,7 +615,27 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://www.brianward.com/areas/roseville.html</loc>
+    <lastmod>2026-04-16</lastmod>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.brianward.com/areas/sacramento.html</loc>
+    <lastmod>2026-04-16</lastmod>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.brianward.com/areas/salinas.html</loc>
+    <lastmod>2026-04-16</lastmod>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://www.brianward.com/areas/san-diego.html</loc>
+    <lastmod>2026-04-16</lastmod>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.brianward.com/areas/san-francisco.html</loc>
     <lastmod>2026-04-16</lastmod>
     <priority>0.5</priority>
   </url>
@@ -346,7 +645,17 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://www.brianward.com/areas/san-jose.html</loc>
+    <lastmod>2026-04-16</lastmod>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://www.brianward.com/areas/san-marcos.html</loc>
+    <lastmod>2026-04-16</lastmod>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.brianward.com/areas/san-mateo.html</loc>
     <lastmod>2026-04-16</lastmod>
     <priority>0.5</priority>
   </url>
@@ -356,7 +665,37 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://www.brianward.com/areas/santa-ana.html</loc>
+    <lastmod>2026-04-16</lastmod>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.brianward.com/areas/santa-barbara.html</loc>
+    <lastmod>2026-04-16</lastmod>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.brianward.com/areas/santa-clara.html</loc>
+    <lastmod>2026-04-16</lastmod>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.brianward.com/areas/santa-clarita.html</loc>
+    <lastmod>2026-04-16</lastmod>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.brianward.com/areas/santa-monica.html</loc>
+    <lastmod>2026-04-16</lastmod>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://www.brianward.com/areas/santee.html</loc>
+    <lastmod>2026-04-16</lastmod>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.brianward.com/areas/simi-valley.html</loc>
     <lastmod>2026-04-16</lastmod>
     <priority>0.5</priority>
   </url>
@@ -376,12 +715,62 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://www.brianward.com/areas/sunnyvale.html</loc>
+    <lastmod>2026-04-16</lastmod>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://www.brianward.com/areas/temecula.html</loc>
     <lastmod>2026-04-16</lastmod>
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://www.brianward.com/areas/thousand-oaks.html</loc>
+    <lastmod>2026-04-16</lastmod>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.brianward.com/areas/thousand-palms.html</loc>
+    <lastmod>2026-04-16</lastmod>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.brianward.com/areas/torrance.html</loc>
+    <lastmod>2026-04-16</lastmod>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.brianward.com/areas/university-city.html</loc>
+    <lastmod>2026-04-16</lastmod>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.brianward.com/areas/upland.html</loc>
+    <lastmod>2026-04-16</lastmod>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.brianward.com/areas/vacaville.html</loc>
+    <lastmod>2026-04-16</lastmod>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.brianward.com/areas/vallejo.html</loc>
+    <lastmod>2026-04-16</lastmod>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://www.brianward.com/areas/valley-center.html</loc>
+    <lastmod>2026-04-16</lastmod>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.brianward.com/areas/ventura.html</loc>
+    <lastmod>2026-04-16</lastmod>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.brianward.com/areas/victorville.html</loc>
     <lastmod>2026-04-16</lastmod>
     <priority>0.5</priority>
   </url>
@@ -400,16 +789,10 @@
     <lastmod>2026-04-16</lastmod>
     <priority>0.5</priority>
   </url>
+  <url>
+    <loc>https://www.brianward.com/areas/yucaipa.html</loc>
+    <lastmod>2026-04-16</lastmod>
+    <priority>0.5</priority>
+  </url>
 
-  <!-- Policy Pages -->
-  <url>
-    <loc>https://www.brianward.com/privacy-policy.html</loc>
-    <lastmod>2026-04-16</lastmod>
-    <priority>0.3</priority>
-  </url>
-  <url>
-    <loc>https://www.brianward.com/terms-of-use.html</loc>
-    <lastmod>2026-04-16</lastmod>
-    <priority>0.3</priority>
-  </url>
 </urlset>

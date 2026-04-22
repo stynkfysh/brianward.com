@@ -83,20 +83,22 @@
 /Wildomar/Appraiser/Wildomar.html /areas/wildomar.html 301
 /Winchester/Appraiser/Winchester.html /areas/winchester.html 301
 
-# Riverside area pages that don't have new equivalents - redirect to service area
-/Cathedral-City/Appraiser/Cathedral-City.html /service-area.html 301
-/Coachella/Appraiser/Coachella.html /service-area.html 301
-/Desert-Hot-Springs/Appraiser/Desert-Hot-Springs.html /service-area.html 301
+# Coachella Valley area pages (now have dedicated pages)
+/Cathedral-City/Appraiser/Cathedral-City.html /areas/cathedral-city.html 301
+/Coachella/Appraiser/Coachella.html /areas/coachella.html 301
+/Desert-Hot-Springs/Appraiser/Desert-Hot-Springs.html /areas/desert-hot-springs.html 301
+/Indian-Wells/Appraiser/Indian-Wells.html /areas/indian-wells.html 301
+/Indio/Appraiser/Indio.html /areas/indio.html 301
+/La-Quinta/Appraiser/La-Quinta.html /areas/la-quinta.html 301
+/Palm-Desert/Appraiser/Palm-Desert.html /areas/palm-desert.html 301
+/Palm-Springs/Appraiser/Palm-Springs.html /areas/palm-springs.html 301
+/Rancho-Mirage/Appraiser/Rancho-Mirage.html /areas/rancho-mirage.html 301
+
+# Riverside area pages without dedicated pages - redirect to service area
 /Homeland/Appraiser/Homeland.html /service-area.html 301
-/Indian-Wells/Appraiser/Indian-Wells.html /service-area.html 301
-/Indio/Appraiser/Indio.html /service-area.html 301
-/La-Quinta/Appraiser/La-Quinta.html /service-area.html 301
 /Lincoln-Acres/Appraiser/Lincoln-Acres.html /service-area.html 301
 /Mira-Loma/Appraiser/Mira-Loma.html /service-area.html 301
 /Nuevo/Appraiser/Nuevo.html /service-area.html 301
-/Palm-Desert/Appraiser/Palm-Desert.html /service-area.html 301
-/Palm-Springs/Appraiser/Palm-Springs.html /service-area.html 301
-/Rancho-Mirage/Appraiser/Rancho-Mirage.html /service-area.html 301
 
 # Common alternate URL patterns and misspellings
 /index.html  /  301

@@ -6,12 +6,18 @@ export async function onRequestPost(context) {
   const name = formData.get("name") || "";
   const email = formData.get("email") || "";
   const phone = formData.get("phone") || "";
-  const propertyAddress = formData.get("property-address") || "";
+  const streetAddress = formData.get("street-address") || "";
+  const city = formData.get("city") || "";
+  const zipcode = formData.get("zipcode") || "";
+  const appraisalPurpose = formData.get("appraisal-purpose") || "";
   const appraisalType = formData.get("appraisal-type") || "";
   const message = formData.get("message") || "";
 
+  // Build full address
+  const fullAddress = [streetAddress, city, zipcode].filter(Boolean).join(", ");
+
   // Validate required fields
-  if (!name || !email || !appraisalType) {
+  if (!name || !email || !appraisalPurpose) {
     return Response.redirect(new URL("/contact.html?status=error", request.url), 303);
   }
 
@@ -22,8 +28,9 @@ New Appraisal Inquiry from brianward.com
 Name: ${name}
 Email: ${email}
 Phone: ${phone || "Not provided"}
-Property Address: ${propertyAddress || "Not provided"}
-Appraisal Type: ${appraisalType}
+Property Address: ${fullAddress || "Not provided"}
+Appraisal Purpose: ${appraisalPurpose}
+Appraisal Type: ${appraisalType || "Not selected"}
 Message: ${message || "None"}
   `.trim();
 
@@ -33,8 +40,9 @@ Message: ${message || "None"}
   <tr><td style="padding:6px 12px;font-weight:bold;">Name</td><td style="padding:6px 12px;">${escapeHtml(name)}</td></tr>
   <tr><td style="padding:6px 12px;font-weight:bold;">Email</td><td style="padding:6px 12px;"><a href="mailto:${escapeHtml(email)}">${escapeHtml(email)}</a></td></tr>
   <tr><td style="padding:6px 12px;font-weight:bold;">Phone</td><td style="padding:6px 12px;">${escapeHtml(phone || "Not provided")}</td></tr>
-  <tr><td style="padding:6px 12px;font-weight:bold;">Property Address</td><td style="padding:6px 12px;">${escapeHtml(propertyAddress || "Not provided")}</td></tr>
-  <tr><td style="padding:6px 12px;font-weight:bold;">Appraisal Type</td><td style="padding:6px 12px;">${escapeHtml(appraisalType)}</td></tr>
+  <tr><td style="padding:6px 12px;font-weight:bold;">Property Address</td><td style="padding:6px 12px;">${escapeHtml(fullAddress || "Not provided")}</td></tr>
+  <tr><td style="padding:6px 12px;font-weight:bold;">Appraisal Purpose</td><td style="padding:6px 12px;">${escapeHtml(appraisalPurpose)}</td></tr>
+  <tr><td style="padding:6px 12px;font-weight:bold;">Appraisal Type</td><td style="padding:6px 12px;">${escapeHtml(appraisalType || "Not selected")}</td></tr>
   <tr><td style="padding:6px 12px;font-weight:bold;">Message</td><td style="padding:6px 12px;">${escapeHtml(message || "None")}</td></tr>
 </table>
   `.trim();
@@ -50,7 +58,7 @@ Message: ${message || "None"}
         from: env.RESEND_FROM || "Brian Ward Appraisal <noreply@brianward.com>",
         to: [env.RESEND_TO || "contact@brianward.com"],
         reply_to: email,
-        subject: `New Appraisal Inquiry – ${appraisalType} – ${name}`,
+        subject: `New Appraisal Inquiry – ${appraisalPurpose} – ${name}`,
         text: emailBody,
         html: htmlBody,
       }),

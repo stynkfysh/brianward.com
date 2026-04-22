@@ -23,7 +23,10 @@
     <meta name="twitter:description" content="Contact Brian Ward Appraisal to order your appraisal online or by phone.">
 
     <title>Contact Us / Order An Appraisal | Brian Ward Appraisal - San Diego, CA</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet" href="css/style.css?v=20260416">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 <body>
@@ -88,7 +91,7 @@
 
     <!-- Hero Banner -->
     <section class="hero-banner">
-        <img src="images/consultation.jpg" alt="Professional handshake and consultation" class="hero-image">
+        <img src="images/hero-contact.jpg" alt="Brian Ward at his desk ready to help with your appraisal needs" class="hero-image">
         <div class="hero-overlay">
             <h2 class="hero-headline">Contact Us</h2>
             <p class="hero-sub">Free, no-pressure consultation about your appraisal needs</p>
@@ -127,12 +130,23 @@
                 <label for="phone">Phone</label>
                 <input type="tel" id="phone" name="phone">
 
-                <label for="property-address">Property Address</label>
-                <input type="text" id="property-address" name="property-address">
+                <label for="street-address">Street Address</label>
+                <input type="text" id="street-address" name="street-address">
 
-                <label for="appraisal-type">Appraisal Type <span style="color: #b33;">*</span></label>
-                <select id="appraisal-type" name="appraisal-type" required>
-                    <option value="">- Select Appraisal Type -</option>
+                <div style="display:flex; gap:16px;">
+                    <div style="flex:1;">
+                        <label for="city">City</label>
+                        <input type="text" id="city" name="city">
+                    </div>
+                    <div style="flex:0 0 120px;">
+                        <label for="zipcode">Zip Code</label>
+                        <input type="text" id="zipcode" name="zipcode" pattern="[0-9]{5}" maxlength="5" inputmode="numeric">
+                    </div>
+                </div>
+
+                <label for="appraisal-purpose">Appraisal Purpose <span style="color: #b33;">*</span></label>
+                <select id="appraisal-purpose" name="appraisal-purpose" required>
+                    <option value="">- Select Appraisal Purpose -</option>
                     <option value="bankruptcy">Bankruptcy</option>
                     <option value="date-of-death">Date of Death</option>
                     <option value="divorce">Divorce</option>
@@ -146,6 +160,19 @@
                     <option value="bonds">Bonds</option>
                     <option value="other">Other</option>
                 </select>
+
+                <label for="appraisal-type">Appraisal Type</label>
+                <select id="appraisal-type" name="appraisal-type">
+                    <option value="">- Select Appraisal Type -</option>
+                    <option value="basic-desktop">Basic Desktop Appraisal — $299</option>
+                    <option value="desktop">Desktop Appraisal — $449</option>
+                    <option value="drive-by">Drive-By Appraisal — $575</option>
+                    <option value="standard">Standard Appraisal — $625</option>
+                    <option value="desktop-2-4">Desktop 2-4 Unit — $550</option>
+                    <option value="standard-2-4">Standard 2-4 Unit — $725</option>
+                    <option value="not-sure">Not sure — help me decide</option>
+                </select>
+                <p style="font-size:13px; color:#666; margin:-4px 0 12px 0;">Fees listed are starting prices. Complex, high-liability, or extended-travel properties may be higher. Your exact fee is quoted before you commit.</p>
 
                 <label for="message">Additional Information</label>
                 <textarea id="message" name="message" rows="5"></textarea>
@@ -192,6 +219,65 @@
         } else if (status === 'error') {
             document.getElementById('form-error').style.display = 'block';
             document.getElementById('form-error').scrollIntoView({ behavior: 'smooth' });
+        }
+    })();
+    </script>
+    <script>
+    (function() {
+        var desktopOnlyCities = [
+            'anaheim','antioch','berkeley','burbank','chino','chino hills',
+            'concord','costa mesa','downey','elk grove','fairfield','fontana',
+            'fremont','fullerton','garden grove','glendale','hayward','hesperia',
+            'hollywood','huntington beach','inglewood','lancaster','long beach',
+            'los angeles','modesto','mountain view','newport beach','ontario',
+            'orange','oxnard','palmdale','pasadena','pomona','rancho cucamonga',
+            'redlands','rialto','richmond','roseville','sacramento','salinas',
+            'san francisco','san jose','san mateo','santa ana','santa barbara',
+            'santa clara','santa clarita','santa monica','simi valley','sunnyvale',
+            'thousand oaks','torrance','upland','vacaville','vallejo','ventura',
+            'victorville','yucaipa'
+        ];
+
+        var allOptions = [
+            {value: '', text: '- Select Appraisal Type -'},
+            {value: 'basic-desktop', text: 'Basic Desktop Appraisal \u2014 $299'},
+            {value: 'desktop', text: 'Desktop Appraisal \u2014 $449'},
+            {value: 'drive-by', text: 'Drive-By Appraisal \u2014 $575'},
+            {value: 'standard', text: 'Standard Appraisal \u2014 $625'},
+            {value: 'desktop-2-4', text: 'Desktop 2-4 Unit \u2014 $550'},
+            {value: 'standard-2-4', text: 'Standard 2-4 Unit \u2014 $725'},
+            {value: 'not-sure', text: 'Not sure \u2014 help me decide'}
+        ];
+
+        var desktopOptions = [
+            {value: '', text: '- Select Appraisal Type -'},
+            {value: 'basic-desktop', text: 'Basic Desktop Appraisal \u2014 $299'},
+            {value: 'desktop', text: 'Desktop Appraisal \u2014 $449'},
+            {value: 'desktop-2-4', text: 'Desktop 2-4 Unit \u2014 $550'},
+            {value: 'not-sure', text: 'Not sure \u2014 help me decide'}
+        ];
+
+        var cityInput = document.getElementById('city');
+        var typeSelect = document.getElementById('appraisal-type');
+
+        function updateTypeOptions() {
+            var city = (cityInput.value || '').trim().toLowerCase();
+            var isDesktopOnly = desktopOnlyCities.indexOf(city) !== -1;
+            var options = isDesktopOnly ? desktopOptions : allOptions;
+            var currentVal = typeSelect.value;
+            typeSelect.innerHTML = '';
+            options.forEach(function(opt) {
+                var o = document.createElement('option');
+                o.value = opt.value;
+                o.textContent = opt.text;
+                if (opt.value === currentVal) o.selected = true;
+                typeSelect.appendChild(o);
+            });
+        }
+
+        if (cityInput && typeSelect) {
+            cityInput.addEventListener('input', updateTypeOptions);
+            cityInput.addEventListener('change', updateTypeOptions);
         }
     })();
     </script>

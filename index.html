@@ -23,7 +23,10 @@
     <meta name="twitter:description" content="22 years, 7,000+ appraisals. Date of death, step-up in basis, divorce, bankruptcy, pre-purchase appraisals. Expert witness. San Diego County.">
 
     <title>Brian Ward Appraisal | Date of Death, Divorce &amp; Bankruptcy Appraiser - San Diego County, CA</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet" href="css/style.css?v=20260416">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 <body>
@@ -50,10 +53,21 @@
         "email": "contact@brianward.com",
         "url": "https://www.brianward.com",
         "priceRange": "$299 - $725",
-        "serviceArea": {
-            "@type": "GeoShape",
-            "areaServed": "San Diego County, CA"
-        },
+        "serviceArea": [
+            {
+                "@type": "AdministrativeArea",
+                "name": "San Diego County, CA"
+            },
+            {
+                "@type": "AdministrativeArea",
+                "name": "Riverside County, CA"
+            },
+            {
+                "@type": "State",
+                "name": "California",
+                "description": "Desktop appraisals available statewide"
+            }
+        ],
         "knowsAbout": [
             "Date of Death Real Estate Appraisal",
             "Step-Up in Basis Tax Valuation",
@@ -104,7 +118,7 @@
         <img src="images/hero-home.jpg" alt="Beautiful residential home in San Diego County" class="hero-image">
         <div class="hero-overlay">
             <h2 class="hero-headline">Certified Residential Appraiser<br>San Diego &amp; Riverside Counties</h2>
-            <p class="hero-sub">Trusted valuations for estates, divorce, bankruptcy, and more</p>
+            <p class="hero-sub">Trusted appraisals for Date-of-Death, divorce, bankruptcy, and more<br>Desktop appraisals available across California</p>
             <a href="contact.html" class="cta-button">Request an Appraisal</a>
         </div>
     </section>
@@ -123,8 +137,8 @@
                     <span class="stat-label">Appraisals Completed</span>
                 </div>
                 <div class="stat-item">
-                    <span class="stat-number">56+</span>
-                    <span class="stat-label">Communities Served</span>
+                    <span class="stat-number">125+</span>
+                    <span class="stat-label">Communities Across California</span>
                 </div>
             </div>
 
@@ -170,6 +184,15 @@
                 </div>
             </div>
 
+            <!-- Desktop Appraisals Statewide Callout -->
+            <div class="cta-banner cta-banner-no-image" style="margin-bottom:0;">
+                <div class="cta-banner-content">
+                    <h2>Desktop Appraisals Across California</h2>
+                    <p>Need an appraisal outside San Diego or Riverside County? We provide USPAP-compliant desktop appraisals for estates, divorce, bankruptcy, and tax matters in 125+ communities across 16 California counties — from Los Angeles and Orange County to the Bay Area and Sacramento.</p>
+                    <a href="service-area.html" class="cta-button">View Our Full Service Area</a>
+                </div>
+            </div>
+
             <!-- Why Choose Us with background image -->
             <article class="why-section">
                 <h2>Why Choose Brian Ward Appraisal?</h2>
@@ -184,7 +207,7 @@
                     </div>
                     <div class="why-item">
                         <strong>Competitive Rates</strong>
-                        <p>Flexible scheduling and fast delivery throughout San Diego and Riverside Counties.</p>
+                        <p>Desktop appraisals starting at $299 and full-service options for San Diego and Riverside Counties. Your fee is quoted before you commit.</p>
                     </div>
                     <div class="why-item">
                         <strong>Certified &amp; Experienced</strong>
