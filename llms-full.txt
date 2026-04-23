@@ -328,16 +328,16 @@ Brian Ward Appraisal performs formal appraisal reviews under USPAP Standard 3. A
 
 ## Key Pages
 
-- Home: https://www.brianward.com/index.html
-- Appraisal Services & Fees: https://www.brianward.com/appraisal-fees.html
-- Service Area: https://www.brianward.com/service-area.html
-- Contact: https://www.brianward.com/contact.html
-- FAQ: https://www.brianward.com/faq.html
-- Reviews: https://www.brianward.com/reviews.html
-- Blog/Market Reports: https://www.brianward.com/blog.html
-- Proposition 19 Appraisal: https://www.brianward.com/prop-19-appraisal.html
-- Expert Witness & Litigation: https://www.brianward.com/expert-witness.html
-- Appraisal Review: https://www.brianward.com/appraisal-review.html
+- Home: https://www.brianward.com/
+- Appraisal Services & Fees: https://www.brianward.com/appraisal-fees
+- Service Area: https://www.brianward.com/service-area
+- Contact: https://www.brianward.com/contact
+- FAQ: https://www.brianward.com/faq
+- Reviews: https://www.brianward.com/reviews
+- Blog/Market Reports: https://www.brianward.com/blog
+- Proposition 19 Appraisal: https://www.brianward.com/prop-19-appraisal
+- Expert Witness & Litigation: https://www.brianward.com/expert-witness
+- Appraisal Review: https://www.brianward.com/appraisal-review
 
 ## Related Site
 
