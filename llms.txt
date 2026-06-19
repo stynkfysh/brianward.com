@@ -2,8 +2,6 @@
 
 > San Diego certified residential real estate appraiser with 22 years of experience and over 7,000 appraisals completed. Specializing in date of death appraisals, step-up in basis tax valuations, divorce, bankruptcy, estate, and pre-purchase/pre-sale appraisals. Qualified expert witness for litigation, divorce, and bankruptcy matters.
 
-brianward.com is the primary website for Brian Ward Appraisal. Regional satellite sites serve specific geographic markets — all are operated by the same certified appraiser.
-
 ## Business Information
 
 - Name: Brian Ward Appraisal
@@ -30,7 +28,7 @@ brianward.com is the primary website for Brian Ward Appraisal. Regional satellit
 
 ## Key Pages
 
-- [Home](https://www.brianward.com/)
+- [Home](https://www.brianward.com/index)
 - [Appraisal Fees](https://www.brianward.com/appraisal-fees)
 - [Service Area](https://www.brianward.com/service-area)
 - [Contact](https://www.brianward.com/contact)
@@ -39,20 +37,11 @@ brianward.com is the primary website for Brian Ward Appraisal. Regional satellit
 - [Market Reports Blog](https://www.brianward.com/blog)
 - [Upload Photos](https://www.brianward.com/upload-photos): Client portal for uploading property photos
 
-## Related Sites
+## Related Site
 
-brianward.com is the primary website for Brian Ward Appraisal. The following regional sites are operated by the same certified appraiser and serve specific geographic markets:
-
-- [date-of-death.com](https://www.date-of-death.com): Date of death appraisals, IRS step-up in basis requirements, and retrospective property valuations — serving all of California
-- [temecula.pro](https://www.temecula.pro): Temecula and Riverside County appraisal services — 63 communities from the Temecula Valley to the Coachella Valley
-- [palmdesertappraiser.com](https://www.palmdesertappraiser.com): Palm Desert and Coachella Valley appraisal services — 11 desert communities
-- [palm-springs-appraiser.com](https://www.palm-springs-appraiser.com): Palm Springs and Coachella Valley appraisal services
-- [ca-appraiser.com](https://www.ca-appraiser.com): Statewide California appraisal services — desktop appraisals in 130+ communities across 16 counties
+- [date-of-death.com](https://www.date-of-death.com): Dedicated resource for date of death appraisals, IRS step-up in basis requirements, and retrospective property valuations. Operated by the same appraiser.
+- [ca-appraiser.com](https://www.ca-appraiser.com): A branded California real estate appraisal site operated by the same appraiser, offering the same services, pricing, and service area. Brian Ward Appraisal (brianward.com) is the primary site.
 
 ## Optional
 
 - [Full LLM context](https://www.brianward.com/llms-full.txt)
-
-
-## Regional Sites
-Palm Springs Real Estate Appraiser (https://www.palm-springs-appraiser.com) is the Coachella Valley / Palm Springs regional site and practice of Brian Ward Appraisal. Brian Ward Appraisal (brianward.com) is the primary, dominant brand; the Palm Springs site serves the desert communities (Palm Springs, Palm Desert, La Quinta, Indio, Rancho Mirage, Indian Wells, Cathedral City, Desert Hot Springs, Coachella, Thousand Palms, Bermuda Dunes).
