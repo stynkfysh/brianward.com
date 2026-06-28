@@ -8,7 +8,7 @@ function getCorsHeaders(requestOrigin) {
   return {
     'Access-Control-Allow-Origin': origin,
     'Access-Control-Allow-Methods': 'POST, OPTIONS',
-    'Access-Control-Allow-Headers': 'Content-Type',
+    'Access-Control-Allow-Headers': 'Content-Type'
   };
 }
 
@@ -43,7 +43,7 @@ async function getAccessToken(env) {
     scope: 'https://www.googleapis.com/auth/drive',
     aud: 'https://oauth2.googleapis.com/token',
     iat: now,
-    exp: now + 3600,
+    exp: now + 3600
   };
 
   const headerB64 = b64url(JSON.stringify(header));
@@ -76,7 +76,7 @@ async function getAccessToken(env) {
   const resp = await fetch('https://oauth2.googleapis.com/token', {
     method: 'POST',
     headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-    body: `grant_type=urn%3Aietf%3Aparams%3Aoauth%3Agrant-type%3Ajwt-bearer&assertion=${jwt}`,
+    body: `grant_type=urn%3Aietf%3Aparams%3Aoauth%3Agrant-type%3Ajwt-bearer&assertion=${jwt}`
   });
 
   if (!resp.ok) {
@@ -107,13 +107,13 @@ async function findOrCreateFolder(accessToken, parentId, folderName) {
     method: 'POST',
     headers: {
       Authorization: `Bearer ${accessToken}`,
-      'Content-Type': 'application/json',
+      'Content-Type': 'application/json'
     },
     body: JSON.stringify({
       name: folderName,
       mimeType: 'application/vnd.google-apps.folder',
-      parents: [parentId],
-    }),
+      parents: [parentId]
+    })
   });
 
   if (!createResp.ok) {
@@ -151,9 +151,9 @@ async function uploadFileToDrive(accessToken, folderId, fileName, fileBuffer, mi
       method: 'POST',
       headers: {
         Authorization: `Bearer ${accessToken}`,
-        'Content-Type': `multipart/related; boundary=${boundary}`,
+        'Content-Type': `multipart/related; boundary=${boundary}`
       },
-      body: body,
+      body: body
     }
   );
 
@@ -191,15 +191,15 @@ async function sendNotificationEmail(env, clientEmail, propertyAddress, photoCou
     method: 'POST',
     headers: {
       Authorization: `Bearer ${env.RESEND_API_KEY}`,
-      'Content-Type': 'application/json',
+      'Content-Type': 'application/json'
     },
     body: JSON.stringify({
       from: 'Brian Ward Appraisal <contact@brianward.com>',
       to: ['contact@brianward.com'],
       reply_to: clientEmail,
       subject: subject,
-      html: html,
-    }),
+      html: html
+    })
   });
 
   if (!resp.ok) {
@@ -219,7 +219,7 @@ export async function onRequestPost(context) {
     if (!ALLOWED_ORIGINS.includes(requestOrigin)) {
       return new Response(JSON.stringify({ error: 'Forbidden' }), {
         status: 403,
-        headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+        headers: { ...corsHeaders, 'Content-Type': 'application/json' }
       });
     }
 
@@ -235,7 +235,7 @@ export async function onRequestPost(context) {
     if (!file || !email || !propertyAddress) {
       return new Response(JSON.stringify({ error: 'Missing required fields (file, email, property_address).' }), {
         status: 400,
-        headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+        headers: { ...corsHeaders, 'Content-Type': 'application/json' }
       });
     }
 
@@ -270,7 +270,7 @@ export async function onRequestPost(context) {
     const folderUrl = `https://drive.google.com/drive/folders/${folderId}`;
     return new Response(JSON.stringify({ success: true, folderId, folderUrl, fileId: uploadResult.id }), {
       status: 200,
-      headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+      headers: { ...corsHeaders, 'Content-Type': 'application/json' }
     });
   } catch (err) {
     console.error('Upload error:', err);
@@ -278,7 +278,7 @@ export async function onRequestPost(context) {
       JSON.stringify({ error: 'Upload failed. Please try again or email photos to contact@brianward.com.', debug: err.message }),
       {
         status: 500,
-        headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+        headers: { ...corsHeaders, 'Content-Type': 'application/json' }
       }
     );
   }

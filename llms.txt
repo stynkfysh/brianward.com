@@ -5,7 +5,6 @@
 ## Business Information
 
 - Name: Brian Ward Appraisal
-- Phone: (888) 844-1733
 - Email: contact@brianward.com
 - Website: https://www.brianward.com
 - Address: 15877 Paseo Del Sur, San Diego, CA 92127

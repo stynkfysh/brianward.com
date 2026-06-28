@@ -55,7 +55,7 @@ Message: ${message || "None"}
       method: "POST",
       headers: {
         "Authorization": `Bearer ${env.RESEND_API_KEY}`,
-        "Content-Type": "application/json",
+        "Content-Type": "application/json"
       },
       body: JSON.stringify({
         from: env.RESEND_FROM || "Brian Ward Appraisal <noreply@brianward.com>",
@@ -63,8 +63,8 @@ Message: ${message || "None"}
         reply_to: email,
         subject: `[${source}] New Appraisal Inquiry – ${appraisalPurpose} – ${name}`,
         text: emailBody,
-        html: htmlBody,
-      }),
+        html: htmlBody
+      })
     });
 
     if (!res.ok) {
