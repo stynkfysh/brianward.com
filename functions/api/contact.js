@@ -19,7 +19,7 @@ const ALLOWED_RETURN_HOSTS = [
 ];
 
 const DEFAULT_SOURCE = "brianward.com";
-const DEFAULT_FROM = "Brian Ward Appraisal <noreply@brianward.com>";
+const DEFAULT_FROM = "Brian Ward Appraisal <contact@brianward.com>";
 const DEFAULT_TO = "contact@brianward.com";
 
 // ---------------------------------------------------------------------------
