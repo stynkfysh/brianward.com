@@ -8,16 +8,20 @@
 /how-to-contact-us.html /contact.html 301
 /Brian-Ward-Appraisal-Blog.html /blog.html 301
 /Brian-Ward-Appraisal-FAQ.html /faq.html 301
+/Appraiser-Reviews /reviews.html 301
 /Appraiser-Reviews/ /reviews.html 301
 /Appraiser-Reviews/index.html /reviews.html 301
 /Brian-Ward-Appraisal-Locations.html /service-area.html 301
 /Mobile/Default.html / 301
 
-# Service pages
-/Bankruptcy/index.html /bankruptcy-appraisal.html 301
+# Service pages (with and without trailing slash)
+/Bankruptcy /bankruptcy-appraisal.html 301
 /Bankruptcy/ /bankruptcy-appraisal.html 301
-/Date-of-Death/index.html /date-of-death-appraisal.html 301
+/Bankruptcy/index.html /bankruptcy-appraisal.html 301
+/Date-of-Death /date-of-death-appraisal.html 301
 /Date-of-Death/ /date-of-death-appraisal.html 301
+/Date-of-Death/index.html /date-of-death-appraisal.html 301
+/Divorce-Appraiser /divorce-appraisal.html 301
 /Divorce-Appraiser/ /divorce-appraisal.html 301
 /Divorce-Appraiser/index.html /divorce-appraisal.html 301
 
