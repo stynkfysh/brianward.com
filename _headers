@@ -38,3 +38,8 @@
 
 /llms-full.txt
   Cache-Control: public, max-age=86400
+
+/i/*
+  X-Robots-Tag: noindex, nofollow, noarchive, nosnippet, noimageindex
+  Referrer-Policy: no-referrer
+  Cache-Control: no-store, max-age=0
