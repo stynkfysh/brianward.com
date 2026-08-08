@@ -43,3 +43,8 @@
   X-Robots-Tag: noindex, nofollow, noarchive, nosnippet, noimageindex
   Referrer-Policy: no-referrer
   Cache-Control: no-store, max-age=0
+
+/q/*
+  X-Robots-Tag: noindex, nofollow, noarchive, nosnippet, noimageindex
+  Referrer-Policy: no-referrer
+  Cache-Control: no-store, max-age=0
