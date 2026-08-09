@@ -13,31 +13,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.brianward.com/blog-2</loc>
-    <lastmod>2026-04-16</lastmod>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://www.brianward.com/blog-3</loc>
-    <lastmod>2026-04-16</lastmod>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://www.brianward.com/blog-4</loc>
-    <lastmod>2026-04-16</lastmod>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://www.brianward.com/blog-5</loc>
-    <lastmod>2026-04-16</lastmod>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://www.brianward.com/blog-6</loc>
-    <lastmod>2026-04-16</lastmod>
-    <priority>0.5</priority>
-  </url>
-  <url>
     <loc>https://www.brianward.com/blog</loc>
     <lastmod>2026-04-16</lastmod>
     <priority>0.5</priority>
@@ -126,11 +101,6 @@
     <loc>https://www.brianward.com/terms-of-use</loc>
     <lastmod>2026-04-16</lastmod>
     <priority>0.3</priority>
-  </url>
-  <url>
-    <loc>https://www.brianward.com/upload-photos</loc>
-    <lastmod>2026-04-16</lastmod>
-    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.brianward.com/prop-19-appraisal</loc>
