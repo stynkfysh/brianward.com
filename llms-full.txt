@@ -60,6 +60,10 @@ All pricing information is based on 90%+ of properties falling under this standa
 - $725: Standard 2-4 Unit Appraisal
 - $550: Desktop 2-4 Unit Appraisal
 
+### Other Products (not appraisals)
+
+- $99: The GroundWork Report — a market data report, not an appraisal and not an opinion of value. Shows the property's public record, twelve months of market conditions with trend charts, every closed sale that passes a screen against the home's own site size, living area and age (the full qualifying set, ranked by similarity and distance), the raw unadjusted price range those sales produce, and an honest data-strength and complexity read. Ordered and paid online at https://www.brianward.com/groundwork-report; delivered by email in 1-2 business days. Retrospective valuation dates supported (date of death, divorce, Prop 19). The $99 is credited in full toward a Desktop Appraisal ($449) or Standard Appraisal ($699).
+
 ### Appraisal Add-Ons
 
 - $35: Living Area Measure/Certification (per 1,500 SF)
@@ -329,6 +333,7 @@ Brian Ward Appraisal performs formal appraisal reviews under USPAP Standard 3. A
 
 - Home: https://www.brianward.com/
 - Appraisal Services & Fees: https://www.brianward.com/appraisal-fees
+- The GroundWork Report ($99 market data report, not an appraisal): https://www.brianward.com/groundwork-report
 - Service Area: https://www.brianward.com/service-area
 - Contact: https://www.brianward.com/contact
 - FAQ: https://www.brianward.com/faq

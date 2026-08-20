@@ -1,4 +1,4 @@
-// Pre-Appraisal Analysis order endpoint — brianward.com
+// GroundWork Report order endpoint — brianward.com
 //
 // Flow: order form POSTs here → spam gate (honeypot, HMAC form token,
 // Turnstile when configured) → order email to Brian via Resend → a Square
@@ -6,7 +6,7 @@
 // property address rides on the checkout name and payment note, so the
 // payment matches the order without guesswork) → the visitor is redirected
 // straight to Square's hosted payment page → after paying, Square returns
-// them to /pre-appraisal-thanks.
+// them to /groundwork-thanks.
 //
 // Degrades gracefully: if Square is unreachable or unconfigured, the order
 // email still goes out (marked PAYMENT LINK FAILED) and the visitor sees a
@@ -15,7 +15,7 @@
 // Env: SQUARE_ACCESS_TOKEN (required for checkout), SQUARE_LOCATION_ID
 // (optional — first ACTIVE location is used otherwise), SQUARE_ENV=sandbox
 // (optional), RESEND_API_KEY, RESEND_FROM, RESEND_TO, FORM_SECRET,
-// TURNSTILE_SECRET_KEY[, _2], PRE_APPRAISAL_FEE (dollars, default 99).
+// TURNSTILE_SECRET_KEY[, _2], GROUNDWORK_FEE (dollars, default 99).
 
 const DEFAULT_SOURCE = "brianward.com";
 const DEFAULT_FROM = "Brian Ward Appraisal <contact@brianward.com>";
@@ -183,7 +183,7 @@ export async function onRequestPost(context) {
 
   // Rule: no address, no product. Street AND (city or zip) are hard requirements.
   if (!name || !email || !street || !(city || zipcode)) {
-    return Response.redirect(returnUrl(request, "/pre-appraisal-analysis?status=error"), 303);
+    return Response.redirect(returnUrl(request, "/groundwork-report?status=error"), 303);
   }
 
   const fullAddress = [street, city, zipcode ? `CA ${zipcode}` : "CA"].filter(Boolean).join(", ");
@@ -205,21 +205,21 @@ export async function onRequestPost(context) {
   if (/https?:\/\//i.test(message)) score += 30;
 
   if (score >= 90) {
-    console.log(JSON.stringify({ blocked: true, endpoint: "pre-appraisal-order", source, name, email, score }));
+    console.log(JSON.stringify({ blocked: true, endpoint: "groundwork-order", source, name, email, score }));
     // The bot sees a soft success; nothing is sent, no checkout is created.
-    return Response.redirect(returnUrl(request, "/pre-appraisal-analysis?status=pending"), 303);
+    return Response.redirect(returnUrl(request, "/groundwork-report?status=pending"), 303);
   }
   const flagged = score >= 50;
 
   // ---- Square checkout for THIS order
-  const fee = Number(env.PRE_APPRAISAL_FEE || 99);
+  const fee = Number(env.GROUNDWORK_FEE || env.PRE_APPRAISAL_FEE || 99);
   let pay = null, payErr = null;
   try {
     pay = await createPaymentLink(env, {
-      itemName: `Pre-Appraisal Analysis — ${fullAddress}`,
-      note: `Pre-Appraisal Analysis — ${fullAddress}`,
+      itemName: `GroundWork Report — ${fullAddress}`,
+      note: `GroundWork Report — ${fullAddress}`,
       buyerEmail: email,
-      redirect: returnUrl(request, "/pre-appraisal-thanks"),
+      redirect: returnUrl(request, "/groundwork-thanks"),
       amountCents: Math.round(fee * 100),
     });
   } catch (err) {
@@ -229,7 +229,7 @@ export async function onRequestPost(context) {
 
   // ---- order email to Brian
   const lines = [
-    `Pre-Appraisal Analysis Order${flagged ? " [POSSIBLE SPAM]" : ""}`,
+    `GroundWork Report Order${flagged ? " [POSSIBLE SPAM]" : ""}`,
     "",
     `SUBMITTED FROM WEBSITE: ${source}`,
     flagged ? `FLAGGED (score ${score})` : "",
@@ -252,9 +252,9 @@ export async function onRequestPost(context) {
   const row = (k, v, alt) =>
     `<tr${alt ? ' style="background:#f5f5f5;"' : ""}><td style="padding:6px 12px;font-weight:bold;">${k}</td><td style="padding:6px 12px;">${v}</td></tr>`;
   const htmlBody = `
-<h2>Pre-Appraisal Analysis Order</h2>
+<h2>GroundWork Report Order</h2>
 ${flagged ? `<p style="font-size:14px;background:#fbe9e7;border:1px solid #d32f2f;color:#c62828;padding:10px 14px;border-radius:4px;">Possible spam (score ${score}) — delivered for your judgment.</p>` : ""}
-<p style="font-size:15px;background:#1a5276;color:#fff;padding:10px 14px;border-radius:4px;">Submitted from: <strong>${escapeHtml(source)}</strong> · $${fee} Pre-Appraisal Analysis</p>
+<p style="font-size:15px;background:#1a5276;color:#fff;padding:10px 14px;border-radius:4px;">Submitted from: <strong>${escapeHtml(source)}</strong> · $${fee} GroundWork Report</p>
 <table style="border-collapse:collapse;font-family:Arial,sans-serif;">
 ${row("Name", escapeHtml(name), true)}
 ${row("Email", `<a href="mailto:${escapeHtml(email)}">${escapeHtml(email)}</a>`)}
@@ -274,14 +274,14 @@ ${pay
       from: fromAddress,
       to: [env.RESEND_TO || DEFAULT_TO],
       reply_to: email,
-      subject: `${flagged ? "[POSSIBLE SPAM] " : ""}[${source}] Pre-Appraisal Analysis Order – ${name}`,
+      subject: `${flagged ? "[POSSIBLE SPAM] " : ""}[${source}] GroundWork Report Order – ${name}`,
       text: emailBody,
       html: htmlBody,
     });
   } catch (err) {
     console.error("Resend error:", err.message);
     // If BOTH the email and the checkout failed, surface a real error.
-    if (!pay) return Response.redirect(returnUrl(request, "/pre-appraisal-analysis?status=error"), 303);
+    if (!pay) return Response.redirect(returnUrl(request, "/groundwork-report?status=error"), 303);
   }
 
   // ---- confirmation to the client (clean submissions only), with the
@@ -292,11 +292,11 @@ ${pay
         from: fromAddress,
         to: [email],
         reply_to: "brian@brianward.com",
-        subject: `Your Pre-Appraisal Analysis order — ${fullAddress}`,
+        subject: `Your GroundWork Report order — ${fullAddress}`,
         text: [
           `Hi ${name},`,
           "",
-          `Thank you for ordering a Pre-Appraisal Analysis for ${fullAddress}.`,
+          `Thank you for ordering a GroundWork Report for ${fullAddress}.`,
           "",
           "You should be on the secure Square payment page now. If the payment",
           "didn't finish, you can complete it any time here:",
@@ -305,7 +305,7 @@ ${pay
           "Once payment is received, your report is prepared and delivered to",
           "this email address, typically within 1-2 business days.",
           "",
-          "The Pre-Appraisal Analysis is a $99 data analysis - not an appraisal",
+          "The GroundWork Report is a $99 market data report - not an appraisal",
           "and not an opinion of value. The full $99 is credited toward a",
           "Desktop Appraisal ($449) or Standard Appraisal ($699) if you upgrade.",
           "",
@@ -320,7 +320,7 @@ ${pay
   }
 
   if (pay) return Response.redirect(pay.url, 303);
-  return Response.redirect(returnUrl(request, "/pre-appraisal-analysis?status=pending"), 303);
+  return Response.redirect(returnUrl(request, "/groundwork-report?status=pending"), 303);
 }
 
 export async function onRequestOptions(context) {

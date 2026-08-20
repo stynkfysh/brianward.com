@@ -121,3 +121,8 @@
 # City-specific bankruptcy and date-of-death query string pages
 # Cloudflare Pages _redirects don't support query strings,
 # but the base paths are covered above
+
+# GroundWork Report (renamed from Pre-Appraisal Analysis, 2026-08-20)
+/pre-appraisal-analysis /groundwork-report 301
+/pre-appraisal-analysis.html /groundwork-report 301
+/pre-appraisal-thanks /groundwork-thanks 301
