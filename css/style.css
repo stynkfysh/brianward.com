@@ -1088,6 +1088,10 @@ table tr:hover td {
     max-width: 680px;
 }
 
+.pricing-grid-5col {
+    grid-template-columns: repeat(5, 1fr);
+}
+
 .pricing-card {
     background: #ffffff;
     border: 1px solid #e2e4e8;
@@ -1386,6 +1390,10 @@ table tr:hover td {
     }
 
     .pricing-grid-2col {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .pricing-grid-5col {
         grid-template-columns: 1fr 1fr;
     }
 
