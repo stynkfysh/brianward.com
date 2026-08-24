@@ -54,9 +54,8 @@
   Referrer-Policy: no-referrer
   Cache-Control: no-store, max-age=0
 
-# Public sample GroundWork Report — readable and crawlable (so assistants can
-# summarise it) but deliberately not indexed: the report carries no business
-# identity or navigation by design, so it is a poor search landing page.
+# Public sample GroundWork Report — a marketing page, indexed like any other.
+# Note this is the ONE path under a report URL that is indexable; real client
+# reports live under /r/* and stay noindex via the block above.
 /groundwork-report-sample/*
-  X-Robots-Tag: noindex, follow
-  Cache-Control: public, max-age=600
+  Cache-Control: public, max-age=3600, must-revalidate
