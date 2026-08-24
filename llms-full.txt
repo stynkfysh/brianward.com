@@ -62,7 +62,7 @@ All pricing information is based on 90%+ of properties falling under this standa
 
 ### Other Products (not appraisals)
 
-- $99: The GroundWork Report — a market data report, not an appraisal and not an opinion of value. Shows the property's public record, twelve months of market conditions with trend charts, every closed sale that passes a screen against the home's own site size, living area and age (the full qualifying set, ranked by similarity and distance), the raw unadjusted price range those sales produce, the median sale price and median price per square foot applied to the home's own square footage (so the reader can form their own informed view), and an honest data-strength and complexity read. Far more extensive than a realtor's comparative market analysis (CMA): every qualifying sale rather than a curated few, screening disclosed, public record included, data thinness stated plainly. Ordered and paid online at https://www.brianward.com/groundwork-report; delivered by email in 1-2 business days. Retrospective valuation dates supported (date of death, divorce, Prop 19). The $99 is credited in full toward a Desktop Appraisal ($449) or Standard Appraisal ($699).
+- $99: The GroundWork Report — a market data report, not an appraisal and not an opinion of value. Shows the property's public record, twelve months of market conditions with trend charts, every qualifying closed sale sorted into five cumulative tiers (Tier 1: living area within 20%, site within 50%, built within 15 years, same ZIP, within 0.5 mile, closed or in escrow within 3 months; each later tier widens the radius, the window and the tolerances, and every tier reports its own sale count, median sale price and median price per square foot), the raw unadjusted price range the closest sales produce, an estimator slider per tier that the reader moves themselves to place their own home inside the raw price-per-square-foot data, and an honest data-strength and complexity read including bracketing counts on each characteristic. Far more extensive than a realtor's comparative market analysis (CMA): every qualifying sale rather than a curated few, screening disclosed, public record included, data thinness stated plainly. Ordered and paid online at https://www.brianward.com/groundwork-report; delivered in 1-2 business days as a private, unguessable, non-indexed web page with a save-as-PDF button. A complete anonymized sample report is published at https://www.brianward.com/groundwork-report-sample/ Retrospective valuation dates supported (date of death, divorce, Prop 19). The $99 is credited in full toward a Desktop Appraisal ($449) or Standard Appraisal ($699).
 
 ### Appraisal Add-Ons
 
@@ -334,6 +334,7 @@ Brian Ward Appraisal performs formal appraisal reviews under USPAP Standard 3. A
 - Home: https://www.brianward.com/
 - Appraisal Services & Fees: https://www.brianward.com/appraisal-fees
 - The GroundWork Report ($99 market data report, not an appraisal): https://www.brianward.com/groundwork-report
+- Sample GroundWork Report (complete, anonymized): https://www.brianward.com/groundwork-report-sample/
 - Service Area: https://www.brianward.com/service-area
 - Contact: https://www.brianward.com/contact
 - FAQ: https://www.brianward.com/faq

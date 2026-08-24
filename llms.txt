@@ -25,6 +25,10 @@
 - [PMI Removal](https://www.brianward.com/pmi-removal): Appraisals to remove private mortgage insurance
 - [Bonds Appraisal](https://www.brianward.com/bonds-appraisal): Valuations for bond and surety purposes
 
+## Reports
+
+- [The GroundWork Report](https://www.brianward.com/groundwork-report): A $99 market data report — not an appraisal and not an opinion of value. Every qualifying closed sale around a property sorted into five cumulative tiers, each tier stating its own screening rules, sale count, median sale price and median price per square foot; the county public record for the parcel; twelve months of market conditions with trend charts; a per-tier estimator the reader moves themselves; and an honest data-strength and complexity read. Retrospective valuation dates supported (date of death, divorce, Prop 19). Delivered as a private web page with a save-as-PDF button. The $99 is credited in full toward a Desktop Appraisal ($449) or Standard Appraisal ($699). A complete anonymized sample is published at https://www.brianward.com/groundwork-report-sample/
+
 ## Key Pages
 
 - [Home](https://www.brianward.com/index)

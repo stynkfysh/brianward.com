@@ -53,3 +53,10 @@
   X-Robots-Tag: noindex, nofollow, noarchive, nosnippet, noimageindex
   Referrer-Policy: no-referrer
   Cache-Control: no-store, max-age=0
+
+# Public sample GroundWork Report — readable and crawlable (so assistants can
+# summarise it) but deliberately not indexed: the report carries no business
+# identity or navigation by design, so it is a poor search landing page.
+/groundwork-report-sample/*
+  X-Robots-Tag: noindex, follow
+  Cache-Control: public, max-age=600
