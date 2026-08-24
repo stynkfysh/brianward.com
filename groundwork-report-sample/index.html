@@ -253,6 +253,21 @@ tr.subject td .sub{color:#C9D6E8}
   window.addEventListener('beforeprint', expandAll);
 
   var b = document.getElementById('saveBtn');
-  if(b) b.addEventListener('click', function(){ expandAll(); window.print(); });
+  function printFallback(){ expandAll(); window.print(); }
+  // A pre-rendered report.pdf sits next to the page when it is published, so the
+  // saved file always has the report's own 0.25in margins instead of whatever the
+  // reader's print dialog happens to be set to. Local/file: copies still print.
+  if(b) b.addEventListener('click', function(){
+    if(location.protocol === 'file:'){ printFallback(); return; }
+    try{
+      fetch('report.pdf', {method:'HEAD'}).then(function(r){
+        if(!r.ok){ printFallback(); return; }
+        var a = document.createElement('a');
+        a.href = 'report.pdf';
+        a.download = 'GroundWork Report.pdf';
+        document.body.appendChild(a); a.click(); a.remove();
+      }).catch(printFallback);
+    }catch(err){ printFallback(); }
+  });
 })();
 </script></body></html>
