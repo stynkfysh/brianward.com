@@ -303,7 +303,7 @@ ${pay
           pay.url,
           "",
           "Once payment is received, your report is prepared and delivered to",
-          "this email address, typically within 1-2 business days.",
+          "this email address, typically within 1 business day.",
           "",
           "The GroundWork Report is a $99 market data report - not an appraisal",
           "and not an opinion of value. The full $99 is credited toward a",
