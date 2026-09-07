@@ -59,3 +59,10 @@
 # reports live under /r/* and stay noindex via the block above.
 /groundwork-report-sample/*
   Cache-Control: public, max-age=3600, must-revalidate
+
+# Sample appraisal reports (Basic Desktop / Desktop) — redacted, reusable link
+# sent to prospective clients. Direct link only, not indexed.
+/samples/*
+  X-Robots-Tag: noindex, nofollow, noarchive, nosnippet, noimageindex
+  Referrer-Policy: no-referrer
+  Cache-Control: public, max-age=86400
