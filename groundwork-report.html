@@ -151,16 +151,16 @@
                 <label for="phone">Phone</label>
                 <input type="tel" id="phone" name="phone">
 
-                <label for="street-address">Property Street Address <span style="color: #b33;">*</span></label>
+                <label for="street-address">Address of Property to Be Appraised <span style="color: #b33;">*</span></label>
                 <input type="text" id="street-address" name="street-address" required>
 
                 <div style="display:flex; gap:16px; max-width:520px;">
                     <div style="flex:1;">
-                        <label for="city">City <span style="color: #b33;">*</span></label>
+                        <label for="city">Property City <span style="color: #b33;">*</span></label>
                         <input type="text" id="city" name="city" required>
                     </div>
                     <div style="flex:0 0 120px;">
-                        <label for="zipcode">Zip Code</label>
+                        <label for="zipcode">Property Zip Code</label>
                         <input type="text" id="zipcode" name="zipcode" pattern="[0-9]{5}" maxlength="5" inputmode="numeric">
                     </div>
                 </div>
@@ -261,5 +261,21 @@
 })();
 </script>
 <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+<script>
+(function () {
+  var purpose = document.getElementById('purpose');
+  var eff = document.getElementById('effective-date');
+  var label = document.querySelector('label[for="effective-date"]');
+  if (!purpose || !eff || !label) return;
+  var original = label.innerHTML;
+  function toggleDod() {
+    var on = purpose.value === 'date-of-death';
+    label.innerHTML = on ? 'Date of Death <span style="color: #b33;">*</span>' : original;
+    eff.required = on;
+  }
+  purpose.addEventListener('change', toggleDod);
+  toggleDod();
+})();
+</script>
 </body>
 </html>
