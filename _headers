@@ -71,5 +71,7 @@
 # never indexed, never cached, no referrer leakage.
 /t/*
   X-Robots-Tag: noindex, nofollow, noarchive, nosnippet, noimageindex
+  ! Referrer-Policy
   Referrer-Policy: no-referrer
+  ! Cache-Control
   Cache-Control: no-store, max-age=0
