@@ -66,3 +66,10 @@
   X-Robots-Tag: noindex, nofollow, noarchive, nosnippet, noimageindex
   Referrer-Policy: no-referrer
   Cache-Control: public, max-age=86400
+
+# Client appraisal status pages. One order per page, unguessable URL,
+# never indexed, never cached, no referrer leakage.
+/t/*
+  X-Robots-Tag: noindex, nofollow, noarchive, nosnippet, noimageindex
+  Referrer-Policy: no-referrer
+  Cache-Control: no-store, max-age=0
