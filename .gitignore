@@ -1,1 +1,9 @@
 _to_delete/
+
+# macOS / iCloud Drive artifacts (added 2026-11-13)
+.DS_Store
+.DS_Store*
+._*
+*.icloud
+* 2.*
+* 3.*
