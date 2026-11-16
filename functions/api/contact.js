@@ -19,12 +19,36 @@ const ALLOWED_RETURN_HOSTS = [
   "emblazed.com", "www.emblazed.com",
   "ward.pro", "www.ward.pro",
   "oceanside.pro", "www.oceanside.pro",
+  "san-diego-appraiser.com", "www.san-diego-appraiser.com",
+  "diego-appraiser.com", "www.diego-appraiser.com",
+  "diegoappraiser.com", "www.diegoappraiser.com",
+  "appraisal-sandiego.com", "www.appraisal-sandiego.com",
+  "bankruptcy-appraiser.com", "www.bankruptcy-appraiser.com",
+  "brianward.net", "www.brianward.net",
+  "appraiser.llc", "www.appraiser.llc",
+  "elcajon.pro", "www.elcajon.pro",
+  "encinitas.pro", "www.encinitas.pro",
+  "lamesa.pro", "www.lamesa.pro",
+  "poway.pro", "www.poway.pro",
 ];
 
 // Sites whose contact page carries no Turnstile widget. A missing token from
 // one of these is "not applicable", not a failure, so a real lead is not
 // flagged; the form-token and content checks still apply.
-const NO_TURNSTILE_SOURCES = ["ward.pro", "oceanside.pro"];
+const NO_TURNSTILE_SOURCES = [
+  "ward.pro", "oceanside.pro",
+  "san-diego-appraiser.com",
+  "diego-appraiser.com",
+  "diegoappraiser.com",
+  "appraisal-sandiego.com",
+  "bankruptcy-appraiser.com",
+  "brianward.net",
+  "appraiser.llc",
+  "elcajon.pro",
+  "encinitas.pro",
+  "lamesa.pro",
+  "poway.pro",
+];
 
 const DEFAULT_SOURCE = "brianward.com";
 const DEFAULT_FROM = "Brian Ward Appraisal <contact@brianward.com>";

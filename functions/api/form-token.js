@@ -18,6 +18,17 @@ const ALLOWED_TOKEN_ORIGINS = [
   "emblazed.com", "www.emblazed.com",
   "ward.pro", "www.ward.pro",
   "oceanside.pro", "www.oceanside.pro",
+  "san-diego-appraiser.com", "www.san-diego-appraiser.com",
+  "diego-appraiser.com", "www.diego-appraiser.com",
+  "diegoappraiser.com", "www.diegoappraiser.com",
+  "appraisal-sandiego.com", "www.appraisal-sandiego.com",
+  "bankruptcy-appraiser.com", "www.bankruptcy-appraiser.com",
+  "brianward.net", "www.brianward.net",
+  "appraiser.llc", "www.appraiser.llc",
+  "elcajon.pro", "www.elcajon.pro",
+  "encinitas.pro", "www.encinitas.pro",
+  "lamesa.pro", "www.lamesa.pro",
+  "poway.pro", "www.poway.pro",
 ];
 
 async function hmac(secret, data) {
