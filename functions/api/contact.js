@@ -16,7 +16,15 @@ const ALLOWED_RETURN_HOSTS = [
   "bw-r.com", "www.bw-r.com",
   "ca-appraiser.com", "www.ca-appraiser.com",
   "palmdesertappraiser.com", "www.palmdesertappraiser.com",
+  "emblazed.com", "www.emblazed.com",
+  "ward.pro", "www.ward.pro",
+  "oceanside.pro", "www.oceanside.pro",
 ];
+
+// Sites whose contact page carries no Turnstile widget. A missing token from
+// one of these is "not applicable", not a failure, so a real lead is not
+// flagged; the form-token and content checks still apply.
+const NO_TURNSTILE_SOURCES = ["ward.pro", "oceanside.pro"];
 
 const DEFAULT_SOURCE = "brianward.com";
 const DEFAULT_FROM = "Brian Ward Appraisal <contact@brianward.com>";
@@ -153,10 +161,13 @@ function scoreSubmission(f) {
 // hostnames and the brianward.com endpoint serves more than that across the
 // market-area sites.
 
-async function verifyTurnstile(token, ip, env) {
-  const secrets = [env.TURNSTILE_SECRET_KEY, env.TURNSTILE_SECRET_KEY_2].filter(Boolean);
+async function verifyTurnstile(token, ip, env, noWidget = false) {
+  const secrets = [
+    env.TURNSTILE_SECRET_KEY, env.TURNSTILE_SECRET_KEY_2,
+    env.TURNSTILE_SECRET_KEY_3, env.TURNSTILE_SECRET_KEY_4,
+  ].filter(Boolean);
   if (!secrets.length) return 'unconfigured';
-  if (!token) return 'failed';
+  if (!token) return noWidget ? 'unconfigured' : 'failed';
 
   for (const secret of secrets) {
     try {
@@ -292,7 +303,14 @@ export async function onRequestPost(context) {
   const turnstile = await verifyTurnstile(
     formData.get('cf-turnstile-response'),
     request.headers.get('CF-Connecting-IP'),
-    env
+    env,
+    // Judged by the browser's Origin/Referer, not the client-supplied source field.
+    (() => {
+      try {
+        const h = new URL(request.headers.get('Origin') || request.headers.get('Referer') || '').hostname;
+        return NO_TURNSTILE_SOURCES.includes(h.replace(/^www\./, '').toLowerCase());
+      } catch (e) { return false; }
+    })()
   );
 
   const { valid: tokenValid, dwellMs } = await verifyToken(

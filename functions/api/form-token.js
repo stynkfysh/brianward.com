@@ -15,6 +15,9 @@ const ALLOWED_TOKEN_ORIGINS = [
   "bw-r.com", "www.bw-r.com",
   "ca-appraiser.com", "www.ca-appraiser.com",
   "palmdesertappraiser.com", "www.palmdesertappraiser.com",
+  "emblazed.com", "www.emblazed.com",
+  "ward.pro", "www.ward.pro",
+  "oceanside.pro", "www.oceanside.pro",
 ];
 
 async function hmac(secret, data) {
